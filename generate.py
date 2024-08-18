@@ -70,6 +70,7 @@ with open("data.md") as f:
                     "```(typescript)?", "", code_block_with_tags.group(0)
                 ).strip()
 
+            # print(repr(with_pres))
             question, answer = with_pres.split("--")
             question = format(question)
             question = question[0].upper() + question[1:]

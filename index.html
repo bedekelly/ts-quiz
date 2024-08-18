@@ -1078,5 +1078,165 @@ const a: A = [1, 2, 3]</pre>
                 </div>
             </details>
         </li>
+<hr id="section-19" />
+<h2 id=discriminated-unions>Discriminated unions <a class=anchor href='#discriminated-unions'>§</a> </h2>
+
+        <li id="question-86">
+            <details>
+                <summary>
+                    What are the two types which <pre>Result</pre> can be here?
+                        <pre class="code-block">type Result = 
+    { success: true, data: string }
+    | { success: false, error: string }</pre>
+                </summary>
+                <div class="details-content">
+                    Result can be either an object whose <pre>success</pre> key is <pre>true</pre>, in which case there will also be a <pre>data</pre> property; or it can have <pre>success: false</pre> and instead have an <pre>error</pre> property.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-87">
+            <details>
+                <summary>
+                    Is <pre>{ success: true }</pre> assignable to the <pre>Result</pre> type above?
+                </summary>
+                <div class="details-content">
+                    No, it doesn't have a <pre>data</pre> property.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-88">
+            <details>
+                <summary>
+                    Is <pre>{ success: false }</pre> assignable to the <pre>Result</pre> type above?
+                </summary>
+                <div class="details-content">
+                    No, it doesn't have an <pre>error</pre> property.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-89">
+            <details>
+                <summary>
+                    Is <pre>{ success: true, data: 'hello' }</pre> assignable to the <pre>Result</pre> type above?
+                </summary>
+                <div class="details-content">
+                    Yes! It has both a <pre>success</pre> property which is <pre>true</pre>, and a <pre>data</pre> property which is a string.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-90">
+            <details>
+                <summary>
+                    Is <pre>{ success: true, data: 123 }</pre> assignable to the <pre>Result</pre> type above?
+                </summary>
+                <div class="details-content">
+                    No; the value of its <pre>data</pre> property should be a string, not a number.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-91">
+            <details>
+                <summary>
+                    Is <pre>{ success: false, error: 'uh oh!' }</pre> assignable to the <pre>Result</pre> type above?
+                </summary>
+                <div class="details-content">
+                    Yes! It has both a <pre>success</pre> property which is <pre>false</pre>, and an <pre>error</pre> property which is a string.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-92">
+            <details>
+                <summary>
+                    Is <pre>{ success: false, data: 'hello!' }</pre> assignable to the <pre>Result</pre> type above?
+                </summary>
+                <div class="details-content">
+                    No; it has a <pre>success</pre> property which is false and so needs an <pre>error</pre> property, which it doesn't have.
+                </div>
+            </details>
+        </li>
+<hr id="section-20" />
+<h2 id=parameterised-discriminated-unions>Parameterised discriminated unions <a class=anchor href='#parameterised-discriminated-unions'>§</a> </h2>
+
+        <li id="question-93">
+            <details>
+                <summary>
+                    What are the two types which <pre>MyResult</pre> can be here?
+                        <pre class="code-block">type GenResult&lt;OnSuccess, OnError&gt; = 
+    { success: true, data: OnSuccess }
+    | { success: false, error: OnError }
+type MyResult = GenResult&lt;string, number&gt;</pre>
+                </summary>
+                <div class="details-content">
+                    <pre>MyResult</pre> can either be of type <pre>{ success: true, data: string }</pre>, or <pre>{ success: false, error: number }</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-94">
+            <details>
+                <summary>
+                    If <pre>MyResult</pre> is defined as above, is <pre>{ success: true, data: 123 }</pre> a valid <pre>MyResult</pre>?
+                </summary>
+                <div class="details-content">
+                    No; if <pre>success</pre> is true then <pre>data</pre> should be a string.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-95">
+            <details>
+                <summary>
+                    If <pre>MyResult</pre> is defined as above, is <pre>{ success: false, error: 8.5 }</pre> a valid <pre>MyResult</pre>?
+                </summary>
+                <div class="details-content">
+                    Yes; <pre>success</pre> is false and <pre>error</pre> is a number, which is the second possible case.
+                </div>
+            </details>
+        </li>
+<hr id="section-21" />
+<h2 id=parameterised-discriminated-unions-2>Parameterised discriminated unions (2) <a class=anchor href='#parameterised-discriminated-unions-2'>§</a> </h2>
+
+        <li id="question-96">
+            <details>
+                <summary>
+                    What are the two types which <pre>ComplexResult</pre> can be here?
+                        <pre class="code-block">type GenResult&lt;OnSuccess, OnError&gt; = 
+    { success: true, data: OnSuccess }
+    | { success: false, error: OnError }
+type ComplexResult = GenResult&lt;Promise&lt;boolean&gt;, Array&lt;string&gt;&gt;</pre>
+                </summary>
+                <div class="details-content">
+                    ComplexResult can either be of type <pre>{ success: true, data: Promise&lt;boolean&gt; }</pre>, or <pre>{ success: false, data: Array&lt;string&gt; }</pre>
+                </div>
+            </details>
+        </li>
+
+        <li id="question-97">
+            <details>
+                <summary>
+                    If <pre>ComplexResult</pre> is defined as above, is <pre>{ success: true, data: Promise.resolve(false) }</pre> a valid <pre>ComplexResult</pre>?
+                </summary>
+                <div class="details-content">
+                    Yes, it matches the first case, since <pre>Promise.resolve(false)</pre> is a <pre>Promise&lt;boolean&gt;</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-98">
+            <details>
+                <summary>
+                    If <pre>ComplexResult</pre> is defined as above, is <pre>{ success: false, data: [1, 2, 'world' ]}</pre> a valid <pre>MyResult</pre>?
+                </summary>
+                <div class="details-content">
+                    No; <pre>[1, 2, 'world']</pre> doesn't match <pre>Array&lt;string&gt;</pre> because <pre>1</pre> and <pre>2</pre> aren't strings.
+                </div>
+            </details>
+        </li>
 </ol>
 </body>

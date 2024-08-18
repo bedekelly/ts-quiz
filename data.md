@@ -418,3 +418,57 @@ const a: A = [1, 2, 3]
 ```
 -- yes, `a` is a `number[]`, so it matches the type referenced by the alias `A`.
 
+---
+
+## Discriminated unions
+What are the two types which `Result` can be here?
+```
+type Result = 
+    { success: true, data: string }
+    | { success: false, error: string }
+```
+-- Result can be either an object whose `success` key is `true`, in which case there will also be a `data` property; or it can have `success: false` and instead have an `error` property.
+
+Is `{ success: true }` assignable to the `Result` type above? -- No, it doesn't have a `data` property.
+
+Is `{ success: false }` assignable to the `Result` type above? -- No, it doesn't have an `error` property.
+
+Is `{ success: true, data: 'hello' }` assignable to the `Result` type above? -- Yes! It has both a `success` property which is `true`, and a `data` property which is a string.
+
+Is `{ success: true, data: 123 }` assignable to the `Result` type above? -- No; the value of its `data` property should be a string, not a number.
+
+Is `{ success: false, error: 'uh oh!' }` assignable to the `Result` type above? -- Yes! It has both a `success` property which is `false`, and an `error` property which is a string.
+
+Is `{ success: false, data: 'hello!' }` assignable to the `Result` type above? -- No; it has a `success` property which is false and so needs an `error` property, which it doesn't have.
+
+---
+
+## Parameterised discriminated unions
+What are the two types which `MyResult` can be here?
+```
+type GenResult<OnSuccess, OnError> = 
+    { success: true, data: OnSuccess }
+    | { success: false, error: OnError }
+type MyResult = GenResult<string, number>
+```
+-- `MyResult` can either be of type `{ success: true, data: string }`, or `{ success: false, error: number }`.
+
+If `MyResult` is defined as above, is `{ success: true, data: 123 }` a valid `MyResult`? -- No; if `success` is true then `data` should be a string.
+
+If `MyResult` is defined as above, is `{ success: false, error: 8.5 }` a valid `MyResult`? -- Yes; `success` is false and `error` is a number, which is the second possible case.
+
+---
+
+## Parameterised discriminated unions (2)
+What are the two types which `ComplexResult` can be here?
+```
+type GenResult<OnSuccess, OnError> = 
+    { success: true, data: OnSuccess }
+    | { success: false, error: OnError }
+type ComplexResult = GenResult<Promise<boolean>, Array<string>>
+```
+-- ComplexResult can either be of type `{ success: true, data: Promise<boolean> }`, or `{ success: false, data: Array<string> }`
+
+If `ComplexResult` is defined as above, is `{ success: true, data: Promise.resolve(false) }` a valid `ComplexResult`? -- Yes, it matches the first case, since `Promise.resolve(false)` is a `Promise<boolean>`.
+
+If `ComplexResult` is defined as above, is `{ success: false, data: [1, 2, 'world' ]}` a valid `MyResult`? -- No; `[1, 2, 'world']` doesn't match `Array<string>` because `1` and `2` aren't strings.
