@@ -29,6 +29,7 @@ print(
     """
     <html lang="en">
     <meta charset="UTF-8">
+    <title>TypeScript Questions</title>
     <head>
         <link rel="stylesheet" href="style.css">   
     </head>
