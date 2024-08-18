@@ -1,4 +1,4 @@
-## Basic Types
+## Basic types
 What type is this? `5` -- It's a `number`.
 
 What type is this? `"hello"` -- It's a `string`.
@@ -34,7 +34,7 @@ What type is this? `{ a: { b: ["hello"]}, b: [1, 2, { c: "world" }]}` -- It's an
 
 ---
 
-## Objects and Keys
+## Objects and keys
 What keys does this object have? `{ a: 1, b: 2 }` -- The keys are `a` and `b`.
 
 What keys does this object have? `{}` -- It doesn't have any keys.
@@ -43,7 +43,7 @@ What keys does this object have? `{ a: 1, b: { c: 3 }}` -- The keys are `a` and 
 
 ---
 
-## Objects and Values
+## Objects and values
 What type are the values of this object? `{ a: 1, b: 2 }` -- The values are of type `number`.
 
 What type are the values of this object? `{ a: 'hello', b: 'world' }` -- The values are of type `string`.
@@ -52,7 +52,7 @@ What type are the values of this object? `{ a: 1, b: 'hello', c: 2, d: 'world' }
 
 ---
 
-## Object Types
+## Object types
 Is it true that this object `a` is of type `{ hello: string }`?
 ```
 const a = {
@@ -259,7 +259,7 @@ Is `Promise.resolve("hello")` a `Promise<'hello'>`? -- no, by default the compil
 
 ---
 
-## Nested Arrays
+## Nested arrays
 What type is `a`?
 ```typescript
 const a = [
