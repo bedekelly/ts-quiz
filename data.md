@@ -14,7 +14,7 @@ Is this a number? `0.5` -- Yes.
 Is this a string? `""` -- Yes.
 
 ---
-## Arrays (1)
+## Arrays
 What type is this? Don't worry about syntax for now. `[1, 2, 3]` -- It's an array of numbers.
 
 What type is this? Don't worry about syntax for now. `["hello", "world"]` -- It's an array of strings.
@@ -295,6 +295,45 @@ async function f() {
 const a = f();
 ```
 -- yes, `a` is a `Promise<string[][]>`, or alternatively a `Promise<Array<Array<string>>>`. It's a Promise which will resolve to a value of type `string[][]`.
+
+---
+
+## Records
+Is type `A` a Record?
+```
+type A = Record<string, number>
+```
+-- yes, `A` is a Record with `string` keys and `number` values.
+
+What type are the keys of `B`?
+```
+type B = Record<'hello', number | string>
+```
+-- The keys in type `B` are of type `'hello'`.
+
+What type are the *values* of `B`?
+```
+type B = Record<'hello', number | string>
+```
+-- The keys in type `B` are of type `number | string`.
+
+Can `value` be assigned to type `B` as shown below?
+```
+type B = Record<'hello', number | string>
+const value: B = {
+    hello: 123
+}
+```
+-- yes, `value` has a key of `'hello'` and a value of `123`, which is a number, so it matches the type `Record<'hello', number | string>`.
+
+Can this `value` be assigned to type `C` like this?
+```
+type C = Record<string, 234>
+const value: C = {
+    world: 456
+}
+```
+-- no; `value` has a key of `'world'`, which matches `string`, but its value of `456` doesn't match the record's value type of `234`.
 
 ---
 

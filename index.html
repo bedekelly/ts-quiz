@@ -88,7 +88,7 @@
             </details>
         </li>
 <hr id="section-2" />
-<h2 id=arrays-1>Arrays (1) <a class=anchor href='#arrays-1'>§</a> </h2>
+<h2 id=arrays>Arrays <a class=anchor href='#arrays'>§</a> </h2>
 
         <li id="question-8">
             <details>
@@ -244,13 +244,12 @@
         <li id="question-21">
             <details>
                 <summary>
-                    Is it true that this object <pre>a</pre> is of type <pre>{ hello: string }</pre>?
-                        <pre class="code-block">const a = {
+                    Is it true that this object <pre>a</pre> is of type <pre>{ hello: string }</pre>?<pre class="code-block">const a = {
     hello: 'world'
 }</pre>
                 </summary>
                 <div class="details-content">
-                    Yes: the TypeScript compiler by default remembers <em>exactly</em> which keys are in an object, but the values are degraded to more generic types.
+                    Yes: the TypeScript compiler by default remembers <em>exactly</em> which keys are in an object, but the values are degraded to more generic types. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBAhjAvDA3gKBpmALApgG3xAC4YByAdxACd8ATMtAXyA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
@@ -258,14 +257,13 @@
         <li id="question-22">
             <details>
                 <summary>
-                    Is it true that this object <pre>a</pre> is of type <pre>{ hello: string, myNumber: number }</pre>?
-                        <pre class="code-block">const a = {
+                    Is it true that this object <pre>a</pre> is of type <pre>{ hello: string, myNumber: number }</pre>?<pre class="code-block">const a = {
     hello: 'world',
     myNumber: 123
 }</pre>
                 </summary>
                 <div class="details-content">
-                    Yes; again, the compiler remembers the keys <pre>hello</pre> and <pre>myNumber</pre> perfectly, but remembers the more generic types <pre>string</pre> and <pre>number</pre> for the values.
+                    Yes; again, the compiler remembers the keys <pre>hello</pre> and <pre>myNumber</pre> perfectly, but remembers the more generic types <pre>string</pre> and <pre>number</pre> for the values. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBAhjAvDA3gKBpmALApgG3xAC4YByAdxACd8ATMgGgywFsBPAOQFdWAjXNVIBGAEwBmNAF8gA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
@@ -275,11 +273,10 @@
         <li id="question-23">
             <details>
                 <summary>
-                    Is it true that this <pre>a</pre> is a number?
-                        <pre class="code-block">const a = 5</pre>
+                    Is it true that this <pre>a</pre> is a number?<pre class="code-block">const a = 5</pre>
                 </summary>
                 <div class="details-content">
-                    Yes, <pre>a</pre> here is a number.
+                    Yes, <pre>a</pre> here is a number. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBAhjAvDArEA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
@@ -355,11 +352,10 @@
         <li id="question-30">
             <details>
                 <summary>
-                    <pre>my_number</pre> is of type <pre>number</pre>. Will this compile without errors?
-                        <pre class="code-block">const expects_five: 5 = my_number</pre>
+                    <pre>my_number</pre> is of type <pre>number</pre>. Will this compile without errors?<pre class="code-block">const expects_five: 5 = my_number</pre>
                 </summary>
                 <div class="details-content">
-                    No. <pre>expects_five</pre> has a more specific type, and the compiler can't prove that <pre>my_number</pre> will meet the requirements of that type. It tells us <pre>Type 'number' is not assignable to type '5'</pre>. If the compiler allowed this, we'd be able to set <pre>expects_five</pre> to <pre>4</pre> in this situation, or <pre>10,000</pre> , or <pre>-8.5</pre>.
+                    No. <pre>expects_five</pre> has a more specific type, and the compiler can't prove that <pre>my_number</pre> will meet the requirements of that type. It tells us <pre>Type 'number' is not assignable to type '5'</pre>. If the compiler allowed this, we'd be able to set <pre>expects_five</pre> to <pre>4</pre> in this situation, or <pre>10,000</pre> , or <pre>-8.5</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBApgDwA52FCB9AZgSwG5wBcMArDALwwC2AnhmAK5UBGcATkA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
@@ -448,13 +444,12 @@
         <li id="question-38">
             <details>
                 <summary>
-                    Will this compile without errors?
-                        <pre class="code-block">let a: string
+                    Will this compile without errors?<pre class="code-block">let a: string
 const b: 'hello' = 'hello'
 a = b;</pre>
                 </summary>
                 <div class="details-content">
-                    Yes, the compiler allows <em>more specific</em> types to be assigned to variables with <em>less specific types</em>.
+                    Yes, the compiler allows <em>more specific</em> types to be assigned to variables with <em>less specific types</em>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/DYUwLgBAhgXBDOYBOBLAdgcwFAGMD2aiEARnAOQAWIwweZEAvBJdbWVlIyQNxA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
@@ -462,13 +457,12 @@ a = b;</pre>
         <li id="question-39">
             <details>
                 <summary>
-                    Will this compile without errors?
-                        <pre class="code-block">let a: 'hello' | 'world';
+                    Will this compile without errors?<pre class="code-block">let a: 'hello' | 'world';
 const b: 'hello' = 'hello';
 a = b;</pre>
                 </summary>
                 <div class="details-content">
-                    Yes, the compiler allows <em>more specific</em> types to be assigned to variables with <em>less specific types</em>.
+                    Yes, the compiler allows <em>more specific</em> types to be assigned to variables with <em>less specific types</em>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/DYUwLgBAhgXBDkALExgHt4QD4IO5oCdgATeAbgCgBjNAOwGdIAjOJFdTAXgWVQ0qgRuTMkA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
@@ -476,14 +470,13 @@ a = b;</pre>
         <li id="question-40">
             <details>
                 <summary>
-                    Will this compile without errors?
-                        <pre class="code-block">function returnsHelloOrWorld(): 'hello' | 'world' {
+                    Will this compile without errors?<pre class="code-block">function returnsHelloOrWorld(): 'hello' | 'world' {
     return 'hello';
 }
 let a: 'hello' = returnsHelloOrWorld()</pre>
                 </summary>
                 <div class="details-content">
-                    No, the compiler will report <pre>'hello' | 'world'</pre> is not assignable to type <pre>'hello'</pre>. For all it knows, the returned value is <pre>'world'</pre>.
+                    No, the compiler will report <pre>'hello' | 'world'</pre> is not assignable to type <pre>'hello'</pre>. For all it knows, the returned value is <pre>'world'</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/GYVwdgxgLglg9mABAJwKZRMsBnAEqgGwLgHlkB1OZAgEwAoBKALkQHIALQ41xAHzYDuVWjwDeAKERSU6TEg5c4rANziAvuILpEAQxYKiSxAF4ZGLHkVlK1egyA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
@@ -491,14 +484,13 @@ let a: 'hello' = returnsHelloOrWorld()</pre>
         <li id="question-41">
             <details>
                 <summary>
-                    Will this compile without errors?
-                        <pre class="code-block">function returnsHelloOrWorld() {
+                    Will this compile without errors?<pre class="code-block">function returnsHelloOrWorld() {
     return 'hello';
 }
 let a: 'hello' = returnsHelloOrWorld()</pre>
                 </summary>
                 <div class="details-content">
-                    No. Without a return type annotation, the compiler infers that the function returns a <pre>string</pre>, and doesn't allow it to be assigned to a variable with a more specific type <pre>'hello'</pre>.
+                    No. Without a return type annotation, the compiler infers that the function returns a <pre>string</pre>, and doesn't allow it to be assigned to a variable with a more specific type <pre>'hello'</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/GYVwdgxgLglg9mABAJwKZRMsBnAEqgGwLgHlkB1OZAgEwAoBKRAbwChEOV1MkByAC0LFeAblYBfVgXSIAhgC5EAoXF6IAvFwxY8KspWr0GQA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
@@ -506,14 +498,13 @@ let a: 'hello' = returnsHelloOrWorld()</pre>
         <li id="question-42">
             <details>
                 <summary>
-                    Will this compile without errors?
-                        <pre class="code-block">function returnsHelloOrWorld(): 'hello' {
+                    Will this compile without errors?<pre class="code-block">function returnsHelloOrWorld(): 'hello' {
     return 'hello';
 }
 let a: 'hello' = returnsHelloOrWorld()</pre>
                 </summary>
                 <div class="details-content">
-                    Yes, the annotation tells the compiler that the function returns <pre>'hello'</pre>, so it can be assigned to the variable <pre>a</pre>.
+                    Yes, the annotation tells the compiler that the function returns <pre>'hello'</pre>, so it can be assigned to the variable <pre>a</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/GYVwdgxgLglg9mABAJwKZRMsBnAEqgGwLgHlkB1OZAgEwAoBKALkQHIALQ41xAbwChEQlOkxIOXOKwDc-AL78C6RAEMWEolMQBeERix5JZStXoMgA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
@@ -521,14 +512,13 @@ let a: 'hello' = returnsHelloOrWorld()</pre>
         <li id="question-43">
             <details>
                 <summary>
-                    Will this compile without errors?
-                        <pre class="code-block">function returnsHelloOrWorld(): 'hello' {
+                    Will this compile without errors?<pre class="code-block">function returnsHelloOrWorld(): 'hello' {
     return 'world';
 }
 let a: 'hello' = returnsHelloOrWorld()</pre>
                 </summary>
                 <div class="details-content">
-                    No, the compiler checks that the return value matches the annotation on a function.
+                    No, the compiler checks that the return value matches the annotation on a function. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/GYVwdgxgLglg9mABAJwKZRMsBnAEqgGwLgHlkB1OZAgEwAoBKALkQHIALQ41xAbwChEQlOkxJWAdyq1WAbn4BffgXSIAhiw5c4PALwiMWPNrKVq9BkA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
@@ -571,13 +561,12 @@ let a: 'hello' = returnsHelloOrWorld()</pre>
         <li id="question-47">
             <details>
                 <summary>
-                    What type is <pre>list</pre> here?
-                        <pre class="code-block">const a: 'hello' = 'hello';
+                    What type is <pre>list</pre> here?<pre class="code-block">const a: 'hello' = 'hello';
 const b: 'world' = 'world;
 const list = [a, b];</pre>
                 </summary>
                 <div class="details-content">
-                    <pre>list</pre> is of type <pre>Array&lt;'hello' | 'world'&gt;</pre>.
+                    <pre>list</pre> is of type <pre>Array&lt;'hello' | 'world'&gt;</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBAhgLhgcgBYFMA2mTJgXhQ21wG4AoUSWAIyWQHcQAnTAEz0MZfYquhiYAlgMIBtOABoYNALqkgA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
@@ -607,13 +596,12 @@ const list = [a, b];</pre>
         <li id="question-50">
             <details>
                 <summary>
-                    Is <pre>list</pre> here of type <pre>('hello' | 'world')[]</pre>?
-                        <pre class="code-block">const a: 'hello' = 'hello';
+                    Is <pre>list</pre> here of type <pre>('hello' | 'world')[]</pre>?<pre class="code-block">const a: 'hello' = 'hello';
 const b: 'world' = 'world;
 const list = [a, b];</pre>
                 </summary>
                 <div class="details-content">
-                    Yes, <pre>list</pre> is of type <pre>Array&lt;'hello' | 'world'&gt;</pre>, which can also be written as <pre>('hello' | 'world')[]</pre>. Round brackets here are just used to group types together.
+                    Yes, <pre>list</pre> is of type <pre>Array&lt;'hello' | 'world'&gt;</pre>, which can also be written as <pre>('hello' | 'world')[]</pre>. Round brackets here are just used to group types together. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBAhgLhgcgBYFMA2mTJgXhQ21wG4AoUSWAIyWQHcQAnTAEz0MZfYquhiYAlgMIBtOABoYNALqkgA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
@@ -656,14 +644,13 @@ const list = [a, b];</pre>
         <li id="question-54">
             <details>
                 <summary>
-                    What type is <pre>a</pre> here?
-                        <pre class="code-block">async function f() {
+                    What type is <pre>a</pre> here?<pre class="code-block">async function f() {
 	return 123;
 }
 const a = f();</pre>
                 </summary>
                 <div class="details-content">
-                    <pre>a</pre> is a <pre>Promise&lt;number&gt;</pre>. Async functions return promises which resolve to the values they return. This has the same effect as writing <pre>Promise.resolve(123)</pre>.
+                    <pre>a</pre> is a <pre>Promise&lt;number&gt;</pre>. Async functions return promises which resolve to the values they return. This has the same effect as writing <pre>Promise.resolve(123)</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/IYZwngdgxgBAZgV2gFwJYHsLwBQEoYDeAUAJABOApsgmVgIwBMAzANxEC+RUmIyMwMALw5cLIA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
@@ -671,14 +658,13 @@ const a = f();</pre>
         <li id="question-55">
             <details>
                 <summary>
-                    What type is <pre>a</pre> here?
-                        <pre class="code-block">async function f() {
+                    What type is <pre>a</pre> here?<pre class="code-block">async function f() {
 	return Promise.resolve(123);
 }
 const a = f();</pre>
                 </summary>
                 <div class="details-content">
-                    <pre>a</pre> is a <pre>Promise&lt;number&gt;</pre>. Nested promises get "flattened".
+                    <pre>a</pre> is a <pre>Promise&lt;number&gt;</pre>. Nested promises get "flattened". <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/IYZwngdgxgBAZgV2gFwJYHsLwBQEoYDeAUAJABOApsgmVgApnoC2qIFAdJSOgDYBuFbAEYATAGZcAbiIBfIlEwhkMYDAC8OKUA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
@@ -686,11 +672,10 @@ const a = f();</pre>
         <li id="question-56">
             <details>
                 <summary>
-                    What type is <pre>a</pre>?
-                        <pre class="code-block">const a = Promise.resolve(Promise.resolve(Promise.resolve(123)))</pre>
+                    What type is <pre>a</pre>?<pre class="code-block">const a = Promise.resolve(Promise.resolve(Promise.resolve(123)))</pre>
                 </summary>
                 <div class="details-content">
-                    <pre>a</pre> is a <pre>Promise&lt;number&gt;</pre>. Nested promises get "flattened".
+                    <pre>a</pre> is a <pre>Promise&lt;number&gt;</pre>. Nested promises get "flattened". <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBAhjAvDACgJxAWwJYQKYB0aeEIANgG54AU6WuhxplNdO+RJ5V1AjAEwBmAJSigA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
@@ -700,11 +685,10 @@ const a = f();</pre>
         <li id="question-57">
             <details>
                 <summary>
-                    What type is <pre>a</pre>?
-                        <pre class="code-block">const a = Promise.resolve([1, 2, 3]);</pre>
+                    What type is <pre>a</pre>?<pre class="code-block">const a = Promise.resolve([1, 2, 3]);</pre>
                 </summary>
                 <div class="details-content">
-                    <pre>a</pre> is a <pre>Promise&lt;Array&lt;number&gt;&gt;</pre>. It's a promise <em>of</em> an array <em>of</em> numbers.
+                    <pre>a</pre> is a <pre>Promise&lt;Array&lt;number&gt;&gt;</pre>. It's a promise <em>of</em> an array <em>of</em> numbers. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBAhjAvDACgJxAWwJYQKYB0aeEIANgG54AUA2gIwA0MATMwMwC6AlANxA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
@@ -712,14 +696,13 @@ const a = f();</pre>
         <li id="question-58">
             <details>
                 <summary>
-                    What type is <pre>a</pre> here?
-                        <pre class="code-block">async function f() {
+                    What type is <pre>a</pre> here?<pre class="code-block">async function f() {
 	return [1, 2, 3]
 }
 const a = f()</pre>
                 </summary>
                 <div class="details-content">
-                    <pre>a</pre> is a <pre>Promise&lt;Array&lt;number&gt;&gt;</pre>. It's a promise <em>of</em> an array <em>of</em> numbers.
+                    <pre>a</pre> is a <pre>Promise&lt;Array&lt;number&gt;&gt;</pre>. It's a promise <em>of</em> an array <em>of</em> numbers. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/IYZwngdgxgBAZgV2gFwJYHsLwBQEoYDeAUAJABOApsgmVgNoCMANDAEwsDMAukQL5FRMIZDGAwAvDlxA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
@@ -738,12 +721,11 @@ const a = f()</pre>
         <li id="question-60">
             <details>
                 <summary>
-                    What type is <pre>a</pre>?
-                        <pre class="code-block">const h: 'hello' = 'hello';
+                    What type is <pre>a</pre>?<pre class="code-block">const h: 'hello' = 'hello';
 const a = Promise.resolve(h);</pre>
                 </summary>
                 <div class="details-content">
-                    <pre>a</pre> is a <pre>Promise&lt;'hello'&gt;</pre>. It's a promise which resolves to a value of type <pre>'hello'</pre>.
+                    <pre>a</pre> is a <pre>Promise&lt;'hello'&gt;</pre>. It's a promise which resolves to a value of type <pre>'hello'</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBAFgLhgcjgUwDYZMmBeFdLHAbgChRJYBDfGABQCcQBbASwjQDpG0IQMANzQAKOAEoSQA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
@@ -764,14 +746,13 @@ const a = Promise.resolve(h);</pre>
         <li id="question-62">
             <details>
                 <summary>
-                    What type is <pre>a</pre>?
-                        <pre class="code-block">const a = [
+                    What type is <pre>a</pre>?<pre class="code-block">const a = [
 	[1, 2, 3],
 	[4, 5, 6]
 ];</pre>
                 </summary>
                 <div class="details-content">
-                    <pre>a</pre> is of type <pre>Array&lt;Array&lt;number&gt;&gt;</pre>. It's an array of arrays of numbers.
+                    <pre>a</pre> is of type <pre>Array&lt;Array&lt;number&gt;&gt;</pre>. It's an array of arrays of numbers. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBAhjAvDA2gKAJAoIwBoYBM+AzALq6YoAs+ArPgGylqkDcQA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
@@ -779,13 +760,12 @@ const a = Promise.resolve(h);</pre>
         <li id="question-63">
             <details>
                 <summary>
-                    Is <pre>a</pre> an <pre>Array&lt;Array&lt;string&gt;&gt;</pre>?
-                        <pre class="code-block">const a = [
+                    Is <pre>a</pre> an <pre>Array&lt;Array&lt;string&gt;&gt;</pre>?<pre class="code-block">const a = [
 	["hello", "world"]
 ]</pre>
                 </summary>
                 <div class="details-content">
-                    Yes, <pre>a</pre> is an <pre>Array&lt;Array&lt;string&gt;&gt;</pre>.
+                    Yes, <pre>a</pre> is an <pre>Array&lt;Array&lt;string&gt;&gt;</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBAhjAvDA2gKAJAoEQAsCmANoSNgDQzYDuIAToQCbYC6azQA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
@@ -793,13 +773,12 @@ const a = Promise.resolve(h);</pre>
         <li id="question-64">
             <details>
                 <summary>
-                    Is <pre>a</pre> a <pre>string[][]</pre>?
-                        <pre class="code-block">const a = [
+                    Is <pre>a</pre> a <pre>string[][]</pre>?<pre class="code-block">const a = [
 	["hello", "world"]
 ]</pre>
                 </summary>
                 <div class="details-content">
-                    Yes, <pre>a</pre> is an <pre>Array&lt;Array&lt;string&gt;&gt;</pre>, which can also be written as <pre>string[][]</pre>.
+                    Yes, <pre>a</pre> is an <pre>Array&lt;Array&lt;string&gt;&gt;</pre>, which can also be written as <pre>string[][]</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBAhjAvDA2gKAJAoEQAsCmANoSNgDQzYDuIAToQCbYC6azQA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
@@ -807,8 +786,7 @@ const a = Promise.resolve(h);</pre>
         <li id="question-65">
             <details>
                 <summary>
-                    What type is <pre>a</pre> here?
-                        <pre class="code-block">async function f() {
+                    What type is <pre>a</pre> here?<pre class="code-block">async function f() {
 	return [
 		["hello", "world"]
 	]
@@ -816,21 +794,20 @@ const a = Promise.resolve(h);</pre>
 const a = f();</pre>
                 </summary>
                 <div class="details-content">
-                    Yes, <pre>a</pre> is a <pre>Promise&lt;string[][]&gt;</pre>, or alternatively a <pre>Promise&lt;Array&lt;Array&lt;string&gt;&gt;&gt;</pre>. It's a Promise which will resolve to a value of type <pre>string[][]</pre>.
+                    Yes, <pre>a</pre> is a <pre>Promise&lt;string[][]&gt;</pre>, or alternatively a <pre>Promise&lt;Array&lt;Array&lt;string&gt;&gt;&gt;</pre>. It's a Promise which will resolve to a value of type <pre>string[][]</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/IYZwngdgxgBAZgV2gFwJYHsLwBQEoYDeAUAJABOApsgmVgNqkl0BEAFhQDYfrMA0MzAO7oyHACbMAuqWkBfIlEwhkMYDAC8OXAG4gA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
 <hr id="section-15" />
-<h2 id=aliases>Aliases <a class=anchor href='#aliases'>§</a> </h2>
+<h2 id=records>Records <a class=anchor href='#records'>§</a> </h2>
 
         <li id="question-66">
             <details>
                 <summary>
-                    Is <pre>NumberAlias</pre> a type alias for <pre>number</pre>?
-                        <pre class="code-block">type NumberAlias = number</pre>
+                    Is type <pre>A</pre> a Record?<pre class="code-block">type A = Record&lt;string, number&gt;</pre>
                 </summary>
                 <div class="details-content">
-                    Yes, <pre>NumberAlias</pre> is now a type alias for <pre>number</pre>.
+                    Yes, <pre>A</pre> is a Record with <pre>string</pre> keys and <pre>number</pre> values. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAglC8UBKEDGB7ATgEwDwGdhMBLAOwHMAaKUgVwFsAjCTAPiA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
@@ -838,11 +815,10 @@ const a = f();</pre>
         <li id="question-67">
             <details>
                 <summary>
-                    Is <pre>NewAlias</pre> a type alias for <pre>number</pre>?
-                        <pre class="code-block">type NewAlias = NumberAlias</pre>
+                    What type are the keys of <pre>B</pre>?<pre class="code-block">type B = Record&lt;'hello', number | string&gt;</pre>
                 </summary>
                 <div class="details-content">
-                    Yes, setting one alias for another will set the new alias to the original type.
+                    The keys in type <pre>B</pre> are of type <pre>'hello'</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAQlC8UBKEDGB7ATgEwDwHIALCAGxPXwBooA7AVwFsAjCTKAHygGdhMBLGgHMAfEA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
@@ -850,12 +826,10 @@ const a = f();</pre>
         <li id="question-68">
             <details>
                 <summary>
-                    Will this compile without errors?
-                        <pre class="code-block">type NumberAlias = number
-const a: NumberAlias = 123;</pre>
+                    What type are the <em>values</em> of <pre>B</pre>?<pre class="code-block">type B = Record&lt;'hello', number | string&gt;</pre>
                 </summary>
                 <div class="details-content">
-                    Yes, <pre>NumberAlias</pre> is an alias for <pre>number</pre>, so this is the same as writing <pre>const a: number = 123</pre>.
+                    The keys in type <pre>B</pre> are of type <pre>number | string</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAQlC8UBKEDGB7ATgEwDwHIALCAGxPXwBooA7AVwFsAjCTKAHygGdhMBLGgHMAfEA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
@@ -863,13 +837,13 @@ const a: NumberAlias = 123;</pre>
         <li id="question-69">
             <details>
                 <summary>
-                    Will this compile without errors?
-                        <pre class="code-block">type NumberAlias = number
-type NewAlias = NumberAlias
-const a: NewAlias = 123;</pre>
+                    Can <pre>value</pre> be assigned to type <pre>B</pre> as shown below?<pre class="code-block">type B = Record&lt;'hello', number | string&gt;
+const value: B = {
+    hello: 123
+}</pre>
                 </summary>
                 <div class="details-content">
-                    Yes, <pre>NewAlias</pre> is another alias for <pre>number</pre>, so this is the same as writing <pre>const a: number = 123</pre>.
+                    Yes, <pre>value</pre> has a key of <pre>'hello'</pre> and a value of <pre>123</pre>, which is a number, so it matches the type <pre>Record&lt;'hello', number | string&gt;</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAQlC8UBKEDGB7ATgEwDwHIALCAGxPXwBooA7AVwFsAjCTKAHygGdhMBLGgHMAfACgMNHlABuAQxJ0IALlgIoAb1FRtUYmXQqAjACYAzKIC+QA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
@@ -877,18 +851,80 @@ const a: NewAlias = 123;</pre>
         <li id="question-70">
             <details>
                 <summary>
-                    Will this compile without errors?
-                        <pre class="code-block">type NumberAlias = number
-type NewAlias = NumberAlias
-const a: NewAlias = 'hello';</pre>
+                    Can this <pre>value</pre> be assigned to type <pre>C</pre> like this?<pre class="code-block">type C = Record&lt;string, 234&gt;
+const value: C = {
+    world: 456
+}</pre>
                 </summary>
                 <div class="details-content">
-                    No, <pre>NewAlias</pre> is another alias for <pre>number</pre>, so this is the same as writing <pre>const a: number = 'hello'</pre>.
+                    No; <pre>value</pre> has a key of <pre>'world'</pre>, which matches <pre>string</pre>, but its value of <pre>456</pre> doesn't match the record's value type of <pre>234</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAwlC8UBKEDGB7ATgEwDwGdhMBLAOwHMAaKAJgGYAWAPgCgNTCoA3AQwBsArhABcsBFADeLKDKgB3LH2yiGAVgBsLAL5A">Try it online 🡒</a>
+                </div>
+            </details>
+        </li>
+<hr id="section-16" />
+<h2 id=aliases>Aliases <a class=anchor href='#aliases'>§</a> </h2>
+
+        <li id="question-71">
+            <details>
+                <summary>
+                    Is <pre>NumberAlias</pre> a type alias for <pre>number</pre>?<pre class="code-block">type NumberAlias = number</pre>
+                </summary>
+                <div class="details-content">
+                    Yes, <pre>NumberAlias</pre> is now a type alias for <pre>number</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAcgrgWwEYQE4EEA2BLAhgZygF4oA7RFVIA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
 
-        <li id="question-71">
+        <li id="question-72">
+            <details>
+                <summary>
+                    Is <pre>NewAlias</pre> a type alias for <pre>number</pre>?<pre class="code-block">type NewAlias = NumberAlias</pre>
+                </summary>
+                <div class="details-content">
+                    Yes, setting one alias for another will set the new alias to the original type. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAchDuBBANgSwIYGcoF5YFcBbAIwgCcUNMg">Try it online 🡒</a>
+                </div>
+            </details>
+        </li>
+
+        <li id="question-73">
+            <details>
+                <summary>
+                    Will this compile without errors?<pre class="code-block">type NumberAlias = number
+const a: NumberAlias = 123;</pre>
+                </summary>
+                <div class="details-content">
+                    Yes, <pre>NumberAlias</pre> is an alias for <pre>number</pre>, so this is the same as writing <pre>const a: number = 123</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAcgrgWwEYQE4EEA2BLAhgZygF4oA7RFVAKAGMB7U-YKXALlgrSz0JIEYATAGYA3EA">Try it online 🡒</a>
+                </div>
+            </details>
+        </li>
+
+        <li id="question-74">
+            <details>
+                <summary>
+                    Will this compile without errors?<pre class="code-block">type NumberAlias = number
+type NewAlias = NumberAlias
+const a: NewAlias = 123;</pre>
+                </summary>
+                <div class="details-content">
+                    Yes, <pre>NewAlias</pre> is another alias for <pre>number</pre>, so this is the same as writing <pre>const a: number = 123</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAcgrgWwEYQE4EEA2BLAhgZygF4oA7RFVAKFElggHcs9CT5k1mCqBjAe1L5gUXAC56THAWJQAjACYAzAG4gA">Try it online 🡒</a>
+                </div>
+            </details>
+        </li>
+
+        <li id="question-75">
+            <details>
+                <summary>
+                    Will this compile without errors?<pre class="code-block">type NumberAlias = number
+type NewAlias = NumberAlias
+const a: NewAlias = 'hello';</pre>
+                </summary>
+                <div class="details-content">
+                    No, <pre>NewAlias</pre> is another alias for <pre>number</pre>, so this is the same as writing <pre>const a: number = 'hello'</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAcgrgWwEYQE4EEA2BLAhgZygF4oA7RFVAKFElggHcs9CT5k1mCqBjAe1L5gUXAC56THAWJQA5AAsImTH1kBuIA">Try it online 🡒</a>
+                </div>
+            </details>
+        </li>
+
+        <li id="question-76">
             <details>
                 <summary>
                     Is there a value which matches <pre>NumberAlias</pre> which doesn't match <pre>number</pre>?
@@ -898,38 +934,36 @@ const a: NewAlias = 'hello';</pre>
                 </div>
             </details>
         </li>
-<hr id="section-16" />
+<hr id="section-17" />
 <h2 id=aliases-for-types-with-parameters>Aliases for types with parameters <a class=anchor href='#aliases-for-types-with-parameters'>§</a> </h2>
 
-        <li id="question-72">
+        <li id="question-77">
             <details>
                 <summary>
-                    What is type <pre>Mystery</pre> here?
-                        <pre class="code-block">type A = number
+                    What is type <pre>Mystery</pre> here?<pre class="code-block">type A = number
 type B = Array&lt;A&gt;
 type Mystery = Promise&lt;B&gt;</pre>
                 </summary>
                 <div class="details-content">
-                    <pre>Mystery</pre> is an alias for <pre>Promise&lt;Array&lt;number&gt;&gt;</pre>, or equivalently <pre>Promise&lt;number[]&gt;</pre>. Aliases don't create any new types, they're just new names for existing ones that can save some typing.
+                    <pre>Mystery</pre> is an alias for <pre>Promise&lt;Array&lt;number&gt;&gt;</pre>, or equivalently <pre>Promise&lt;number[]&gt;</pre>. Aliases don't create any new types, they're just new names for existing ones that can save some typing. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAglC8UB2BXAtgIwgJwFCkigCEFZtsBDEAHhgD59xoBZEAZ2BxFIAVsB7NAEs2EakTpA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
 
-        <li id="question-73">
+        <li id="question-78">
             <details>
                 <summary>
-                    What is type <pre>Puzzle</pre> here?
-                        <pre class="code-block">type A = 'hello' | 'world'
+                    What is type <pre>Puzzle</pre> here?<pre class="code-block">type A = 'hello' | 'world'
 type B = Array&lt;Promise&lt;A&gt;&gt;
 type Puzzle = B | A</pre>
                 </summary>
                 <div class="details-content">
-                    <pre>Puzzle</pre> is of type <pre>Array&lt;Promise&lt;'hello' | 'world'&gt;&gt; | 'hello' | 'world'</pre>. Aliases are replaced like-for-like with the types they refer to.
+                    <pre>Puzzle</pre> is of type <pre>Array&lt;Promise&lt;'hello' | 'world'&gt;&gt; | 'hello' | 'world'</pre>. Aliases are replaced like-for-like with the types they refer to. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAglC8UDkALCAbdB7JUA+yA7lgE7oAmSAUKJFAEIKwkkCGIAPAAolYC2ASwDOEDjAB84muGhcArgC8F6aIkYEYQA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
 
-        <li id="question-74">
+        <li id="question-79">
             <details>
                 <summary>
                     Does <pre>'hello'</pre> match the type <pre>Puzzle</pre> above?
@@ -940,7 +974,7 @@ type Puzzle = B | A</pre>
             </details>
         </li>
 
-        <li id="question-75">
+        <li id="question-80">
             <details>
                 <summary>
                     Does <pre>[ Promise.resolve('world') ]</pre> match the type <pre>Puzzle</pre> above?
@@ -951,49 +985,46 @@ type Puzzle = B | A</pre>
             </details>
         </li>
 
-        <li id="question-76">
+        <li id="question-81">
             <details>
                 <summary>
-                    Does this compile without errors?
-                        <pre class="code-block">type A = Array&lt;number&gt;
+                    Does this compile without errors?<pre class="code-block">type A = Array&lt;number&gt;
 type B = Promise&lt;string&gt;
 const a: A | B = [ Promise.resolve('123') ];</pre>
                 </summary>
                 <div class="details-content">
-                    No, <pre>[ Promise.resolve('123') ]</pre> is of type <pre>Array&lt;Promise&lt;string&gt;&gt;</pre>, which isn't assignable to either <pre>Array&lt;number&gt;</pre> or <pre>Promise&lt;string&gt;</pre>, so therefore isn't assignable to <pre>Array&lt;number&gt; | Promise&lt;string&gt;</pre>, which is written here with aliases as <pre>A | B</pre>.
+                    No, <pre>[ Promise.resolve('123') ]</pre> is of type <pre>Array&lt;Promise&lt;string&gt;&gt;</pre>, which isn't assignable to either <pre>Array&lt;number&gt;</pre> or <pre>Promise&lt;string&gt;</pre>, so therefore isn't assignable to <pre>Array&lt;number&gt; | Promise&lt;string&gt;</pre>, which is written here with aliases as <pre>A | B</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAglC8sBOSCGIA8A7ArgWwCMIkA+AKFEigCEEoAFJAezwEsBnCDd4JVrAObkAxkyw8oqAFywoAHxp0A2g2ZtOAOiQR2TADYA3CAAoA5AEYATAGZTASigBdANxA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
-<hr id="section-17" />
+<hr id="section-18" />
 <h2 id=aliases-with-parameters>Aliases with parameters <a class=anchor href='#aliases-with-parameters'>§</a> </h2>
 
-        <li id="question-77">
+        <li id="question-82">
             <details>
                 <summary>
-                    What is type <pre>Mystery</pre> here?
-                        <pre class="code-block">type MakeArray&lt;T&gt; = Array&lt;T&gt;
+                    What is type <pre>Mystery</pre> here?<pre class="code-block">type MakeArray&lt;T&gt; = Array&lt;T&gt;
 type Mystery = MakeArray&lt;number&gt;</pre>
                 </summary>
                 <div class="details-content">
-                    <pre>Mystery</pre> is the type <pre>Array&lt;number&gt;</pre>.
+                    <pre>Mystery</pre> is the type <pre>Array&lt;number&gt;</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAsghgawgQQE6riAPAFQHxQC8UaG2+AUKJLCAM7ASohGyIrqZYB2ArgLYAjJniA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
 
-        <li id="question-78">
+        <li id="question-83">
             <details>
                 <summary>
-                    What is type <pre>Puzzle</pre> here?
-                        <pre class="code-block">type MakePromise&lt;TypeParameter&gt; = Promise&lt;TypeParameter&gt;
+                    What is type <pre>Puzzle</pre> here?<pre class="code-block">type MakePromise&lt;TypeParameter&gt; = Promise&lt;TypeParameter&gt;
 type Puzzle = MakePromise&lt;number&gt;</pre>
                 </summary>
                 <div class="details-content">
-                    <pre>Puzzle</pre> is a <pre>Promise&lt;number&gt;</pre>. The type <pre>number</pre> is passed to the parameter <pre>TypeParameter</pre>.
+                    <pre>Puzzle</pre> is a <pre>Promise&lt;number&gt;</pre>. The type <pre>number</pre> is passed to the parameter <pre>TypeParameter</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAsghgawgBQE4HsC2BLAzhAHgBVwU5U5MJgJUA+KAXijSz0JMmXMutroBQoSCwCuAL3EAbaM3hJWOfAQB2ozACN+QA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
 
-        <li id="question-79">
+        <li id="question-84">
             <details>
                 <summary>
                     In <pre>type MyType&lt;MyParam&gt; = ...</pre>, is <pre>MyParam</pre> a type parameter?
@@ -1004,7 +1035,7 @@ type Puzzle = MakePromise&lt;number&gt;</pre>
             </details>
         </li>
 
-        <li id="question-80">
+        <li id="question-85">
             <details>
                 <summary>
                     In <pre>type MyType&lt;OneParam, AnotherParam&gt; = ...</pre>, how many type parameters are there?
@@ -1015,7 +1046,7 @@ type Puzzle = MakePromise&lt;number&gt;</pre>
             </details>
         </li>
 
-        <li id="question-81">
+        <li id="question-86">
             <details>
                 <summary>
                     In <pre>type A&lt;T&gt; = ...</pre>, is <pre>A</pre> a parameterised type?
@@ -1025,23 +1056,22 @@ type Puzzle = MakePromise&lt;number&gt;</pre>
                 </div>
             </details>
         </li>
-<hr id="section-18" />
+<hr id="section-19" />
 <h2 id=aliases-for-types-with-parameters-2>Aliases for types with parameters (2) <a class=anchor href='#aliases-for-types-with-parameters-2'>§</a> </h2>
 
-        <li id="question-82">
+        <li id="question-87">
             <details>
                 <summary>
-                    What is type <pre>A</pre> here?
-                        <pre class="code-block">type SomeType&lt;ParamOne, ParamTwo&gt; = Array&lt;ParamOne | ParamTwo&gt;;
+                    What is type <pre>A</pre> here?<pre class="code-block">type SomeType&lt;ParamOne, ParamTwo&gt; = Array&lt;ParamOne | ParamTwo&gt;;
 type A = SomeType&lt;number, string&gt;</pre>
                 </summary>
                 <div class="details-content">
-                    Type <pre>A</pre> is <pre>Array&lt;number | string&gt;</pre>. <pre>number</pre> is passed in as <pre>ParamOne</pre>, and <pre>string</pre> is passed as <pre>ParamTwo</pre>.
+                    Type <pre>A</pre> is <pre>Array&lt;number | string&gt;</pre>. <pre>number</pre> is passed in as <pre>ParamOne</pre>, and <pre>string</pre> is passed as <pre>ParamTwo</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAyg9gWwgFXBAPABQIYCdsIDyAdhADRQ74LIDucAfFALxQCCu+IWeBJ0AH0q8a9BgG4AUKEjsWsRCjTpiAVwQAjCLgoBnYLgCWxAOYMgA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
 
-        <li id="question-83">
+        <li id="question-88">
             <details>
                 <summary>
                     Do type parameters need to be a single character?
@@ -1052,51 +1082,48 @@ type A = SomeType&lt;number, string&gt;</pre>
             </details>
         </li>
 
-        <li id="question-84">
+        <li id="question-89">
             <details>
                 <summary>
-                    Does this compile without errors?
-                        <pre class="code-block">type SomeType&lt;ParamOne, ParamTwo&gt; = Array&lt;ParamOne | ParamTwo&gt;;
+                    Does this compile without errors?<pre class="code-block">type SomeType&lt;ParamOne, ParamTwo&gt; = Array&lt;ParamOne | ParamTwo&gt;;
 type A = SomeType&lt;number, string&gt;
 const a: A = [1, 2, "hello"]</pre>
                 </summary>
                 <div class="details-content">
-                    Yes, <pre>a</pre> is an <pre>Array&lt;string | number&gt;</pre>, so it matches the type referenced by the alias <pre>A</pre>.
+                    Yes, <pre>a</pre> is an <pre>Array&lt;string | number&gt;</pre>, so it matches the type referenced by the alias <pre>A</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAyg9gWwgFXBAPABQIYCdsIDyAdhADRQ74LIDucAfFALxQCCu+IWeBJ0AH0q8a9BgG4AUKEjsWsRCjTpiAVwQAjCLgoBnYLgCWxAOYNJAYzjF9UbAC45rANoBGCgCYKAIgAWEABsAuG8AXSA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
 
-        <li id="question-85">
+        <li id="question-90">
             <details>
                 <summary>
-                    Does this compile without errors?
-                        <pre class="code-block">type SomeType&lt;ParamOne, ParamTwo&gt; = Array&lt;ParamOne | ParamTwo&gt;;
+                    Does this compile without errors?<pre class="code-block">type SomeType&lt;ParamOne, ParamTwo&gt; = Array&lt;ParamOne | ParamTwo&gt;;
 type A = SomeType&lt;number, string&gt;
 const a: A = [1, 2, 3]</pre>
                 </summary>
                 <div class="details-content">
-                    Yes, <pre>a</pre> is a <pre>number[]</pre>, so it matches the type referenced by the alias <pre>A</pre>.
+                    Yes, <pre>a</pre> is a <pre>number[]</pre>, so it matches the type referenced by the alias <pre>A</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAyg9gWwgFXBAPABQIYCdsIDyAdhADRQ74LIDucAfFALxQCCu+IWeBJ0AH0q8a9BgG4AUKEjsWsRCjTpiAVwQAjCLgoBnYLgCWxAOYNJAYzjF9UbAC45rANoBGCgCYKAZgC6QA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
-<hr id="section-19" />
+<hr id="section-20" />
 <h2 id=discriminated-unions>Discriminated unions <a class=anchor href='#discriminated-unions'>§</a> </h2>
 
-        <li id="question-86">
+        <li id="question-91">
             <details>
                 <summary>
-                    What are the two types which <pre>Result</pre> can be here?
-                        <pre class="code-block">type Result = 
+                    What are the two types which <pre>Result</pre> can be here?<pre class="code-block">type Result = 
     { success: true, data: string }
     | { success: false, error: string }</pre>
                 </summary>
                 <div class="details-content">
-                    Result can be either an object whose <pre>success</pre> key is <pre>true</pre>, in which case there will also be a <pre>data</pre> property; or it can have <pre>success: false</pre> and instead have an <pre>error</pre> property.
+                    Result can be either an object whose <pre>success</pre> key is <pre>true</pre>, in which case there will also be a <pre>data</pre> property; or it can have <pre>success: false</pre> and instead have an <pre>error</pre> property. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAShDOBXANsKBeKAoKuoG8okBjYheALimACdEIAaKAEwENhWr5aBLAOwDmUAL448AHwJFEpclQBmrZPEZQINGgHsaXXoJFA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
 
-        <li id="question-87">
+        <li id="question-92">
             <details>
                 <summary>
                     Is <pre>{ success: true }</pre> assignable to the <pre>Result</pre> type above?
@@ -1107,7 +1134,7 @@ const a: A = [1, 2, 3]</pre>
             </details>
         </li>
 
-        <li id="question-88">
+        <li id="question-93">
             <details>
                 <summary>
                     Is <pre>{ success: false }</pre> assignable to the <pre>Result</pre> type above?
@@ -1118,7 +1145,7 @@ const a: A = [1, 2, 3]</pre>
             </details>
         </li>
 
-        <li id="question-89">
+        <li id="question-94">
             <details>
                 <summary>
                     Is <pre>{ success: true, data: 'hello' }</pre> assignable to the <pre>Result</pre> type above?
@@ -1129,7 +1156,7 @@ const a: A = [1, 2, 3]</pre>
             </details>
         </li>
 
-        <li id="question-90">
+        <li id="question-95">
             <details>
                 <summary>
                     Is <pre>{ success: true, data: 123 }</pre> assignable to the <pre>Result</pre> type above?
@@ -1140,7 +1167,7 @@ const a: A = [1, 2, 3]</pre>
             </details>
         </li>
 
-        <li id="question-91">
+        <li id="question-96">
             <details>
                 <summary>
                     Is <pre>{ success: false, error: 'uh oh!' }</pre> assignable to the <pre>Result</pre> type above?
@@ -1151,7 +1178,7 @@ const a: A = [1, 2, 3]</pre>
             </details>
         </li>
 
-        <li id="question-92">
+        <li id="question-97">
             <details>
                 <summary>
                     Is <pre>{ success: false, data: 'hello!' }</pre> assignable to the <pre>Result</pre> type above?
@@ -1161,25 +1188,24 @@ const a: A = [1, 2, 3]</pre>
                 </div>
             </details>
         </li>
-<hr id="section-20" />
+<hr id="section-21" />
 <h2 id=parameterised-discriminated-unions>Parameterised discriminated unions <a class=anchor href='#parameterised-discriminated-unions'>§</a> </h2>
 
-        <li id="question-93">
+        <li id="question-98">
             <details>
                 <summary>
-                    What are the two types which <pre>MyResult</pre> can be here?
-                        <pre class="code-block">type GenResult&lt;OnSuccess, OnError&gt; = 
+                    What are the two types which <pre>MyResult</pre> can be here?<pre class="code-block">type GenResult&lt;OnSuccess, OnError&gt; = 
     { success: true, data: OnSuccess }
     | { success: false, error: OnError }
 type MyResult = GenResult&lt;string, number&gt;</pre>
                 </summary>
                 <div class="details-content">
-                    <pre>MyResult</pre> can either be of type <pre>{ success: true, data: string }</pre>, or <pre>{ success: false, error: number }</pre>.
+                    <pre>MyResult</pre> can either be of type <pre>{ success: true, data: string }</pre>, or <pre>{ success: false, error: number }</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBA4hB2AlCBnArgG2AHgPLwGU0BjY1FAGinwFEAnOgezoD4oBeKAKCl6gG8o6UuQBcUYHTQQqAEwCGweePxERKFFAC+PPgB8BQkmQ3iAZvIwoZUCA2Yr49JnW1dQkKAFkQydFg5YBD9MHBRJAEt4AHMqeDQAWwAjOxYgA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
 
-        <li id="question-94">
+        <li id="question-99">
             <details>
                 <summary>
                     If <pre>MyResult</pre> is defined as above, is <pre>{ success: true, data: 123 }</pre> a valid <pre>MyResult</pre>?
@@ -1190,7 +1216,7 @@ type MyResult = GenResult&lt;string, number&gt;</pre>
             </details>
         </li>
 
-        <li id="question-95">
+        <li id="question-100">
             <details>
                 <summary>
                     If <pre>MyResult</pre> is defined as above, is <pre>{ success: false, error: 8.5 }</pre> a valid <pre>MyResult</pre>?
@@ -1200,25 +1226,24 @@ type MyResult = GenResult&lt;string, number&gt;</pre>
                 </div>
             </details>
         </li>
-<hr id="section-21" />
+<hr id="section-22" />
 <h2 id=parameterised-discriminated-unions-2>Parameterised discriminated unions (2) <a class=anchor href='#parameterised-discriminated-unions-2'>§</a> </h2>
 
-        <li id="question-96">
+        <li id="question-101">
             <details>
                 <summary>
-                    What are the two types which <pre>ComplexResult</pre> can be here?
-                        <pre class="code-block">type GenResult&lt;OnSuccess, OnError&gt; = 
+                    What are the two types which <pre>ComplexResult</pre> can be here?<pre class="code-block">type GenResult&lt;OnSuccess, OnError&gt; = 
     { success: true, data: OnSuccess }
     | { success: false, error: OnError }
 type ComplexResult = GenResult&lt;Promise&lt;boolean&gt;, Array&lt;string&gt;&gt;</pre>
                 </summary>
                 <div class="details-content">
-                    ComplexResult can either be of type <pre>{ success: true, data: Promise&lt;boolean&gt; }</pre>, or <pre>{ success: false, data: Array&lt;string&gt; }</pre>
+                    ComplexResult can either be of type <pre>{ success: true, data: Promise&lt;boolean&gt; }</pre>, or <pre>{ success: false, data: Array&lt;string&gt; }</pre> <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBA4hB2AlCBnArgG2AHgPLwGU0BjY1FAGinwFEAnOgezoD4oBeKAKCl6gG8o6UuQBcUYHTQQqAEwCGweePxERKFFAC+PPgB8BQkmQ3iAZvIwoZUCA2Yr49JnW1dQkKAGFGAWzAYEAAeyOhYHLAIoZg4AApMvgCW1tgARoyMgfLwLFQAggzyINgokonwAOYsLEA">Try it online 🡒</a>
                 </div>
             </details>
         </li>
 
-        <li id="question-97">
+        <li id="question-102">
             <details>
                 <summary>
                     If <pre>ComplexResult</pre> is defined as above, is <pre>{ success: true, data: Promise.resolve(false) }</pre> a valid <pre>ComplexResult</pre>?
@@ -1229,7 +1254,7 @@ type ComplexResult = GenResult&lt;Promise&lt;boolean&gt;, Array&lt;string&gt;&gt
             </details>
         </li>
 
-        <li id="question-98">
+        <li id="question-103">
             <details>
                 <summary>
                     If <pre>ComplexResult</pre> is defined as above, is <pre>{ success: false, data: [1, 2, 'world' ]}</pre> a valid <pre>MyResult</pre>?

@@ -1,5 +1,8 @@
 from pprint import pprint
 import re
+import lzstring
+
+lz = lzstring.LZString()
 
 code_block_pattern = re.compile("```(?s:.)*?```")
 code_inline_pattern = re.compile("`(.*?)`")
@@ -8,7 +11,7 @@ _unsafe = re.compile("[^A-Za-z0-9]+")
 
 
 def slugify(s):
-    return re.sub(_unsafe, "-", s).lower().strip('-')
+    return re.sub(_unsafe, "-", s).lower().strip("-")
 
 
 def format(s):
@@ -49,7 +52,9 @@ with open("data.md") as f:
             title = section.strip().split("\n")[0]
             section = section.replace(title + "\n", "")
             title = title.replace("##", "").strip()
-            print(f"<h2 id={slugify(title)}>{title} <a class=anchor href='#{slugify(title)}'>§</a> </h2>")
+            print(
+                f"<h2 id={slugify(title)}>{title} <a class=anchor href='#{slugify(title)}'>§</a> </h2>"
+            )
 
         questions = section.split("\n\n")
 
@@ -92,9 +97,8 @@ with open("data.md") as f:
                 <summary>
                     {question}"""
                 + (
-                    """
-                        <pre class="code-block">{}</pre>""".format(
-                        code_block.replace("<", "&lt;").replace(">", "&gt;")
+                    """<pre class="code-block">{}</pre>""".format(
+                        code_block.replace("<", "&lt;").replace(">", "&gt;"),
                     )
                     if code_block
                     else ""
@@ -102,7 +106,7 @@ with open("data.md") as f:
                 + f"""
                 </summary>
                 <div class="details-content">
-                    {answer}
+                    {answer}{' <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/{}">Try it online 🡒</a>'.format(lz.compressToEncodedURIComponent(code_block))if code_block else ''}
                 </div>
             </details>
         </li>"""

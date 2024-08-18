@@ -38,6 +38,7 @@ pre {
   padding-block: 0.5lh;
   padding-inline-start: 1.5em;
   margin-block-end: 0;
+  position: relative;
 }
 
 li {
@@ -55,3 +56,10 @@ h2 {
     color: #777;
     font-size: 0.7em;
 }
+
+/* .ts-playground {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 5px;
+} */
