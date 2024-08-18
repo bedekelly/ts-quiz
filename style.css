@@ -1,0 +1,57 @@
+body {
+  font-family: "Computer Modern";
+  background: antiquewhite;
+  line-height: 1.6;
+  font-size: 14pt;
+  max-width: 900px;
+  margin: 2lh auto 0 auto;
+}
+
+@font-face {
+  font-family: "Computer Modern";
+  src: url("./cmunrm-webfont.woff");
+}
+
+pre {
+  display: inline;
+  font-size: 12pt;
+  background: #edd;
+  padding-inline: 7px;
+  padding-block: 5px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+.details-content {
+  display: block;
+  margin-block-start: 0.5lh;
+  /* margin-inline-start: 3em; */
+}
+
+.details-content::before {
+  content: "Answer: ";
+}
+
+.code-block {
+  display: block;
+  margin-inline-start: 1em;
+  padding-block: 0.5lh;
+  padding-inline-start: 1.5em;
+  margin-block-end: 0;
+}
+
+li {
+  margin-block: 50px;
+}
+
+
+h2 {
+    /* This is unholy... please don't copy. */
+    margin-block-end: -15px;
+    margin-inline-start: -40px;
+}
+
+.anchor {
+    color: #777;
+    font-size: 0.7em;
+}

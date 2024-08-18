@@ -1,0 +1,1082 @@
+
+    <html lang="en">
+    <meta charset="UTF-8">
+    <head>
+        <link rel="stylesheet" href="style.css">   
+    </head>
+    <body>
+    <h1>TypeScript Questions</h1>
+    <ol>
+<hr id="section-1" />
+<h2 id=basic-types>Basic Types <a class=anchor href='#basic-types'>§</a> </h2>
+
+        <li id="question-1">
+            <details>
+                <summary>
+                    What type is this? <pre>5</pre>
+                </summary>
+                <div class="details-content">
+                    It's a <pre>number</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-2">
+            <details>
+                <summary>
+                    What type is this? <pre>"hello"</pre>
+                </summary>
+                <div class="details-content">
+                    It's a <pre>string</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-3">
+            <details>
+                <summary>
+                    Is this a number? <pre>"5"</pre>
+                </summary>
+                <div class="details-content">
+                    No, it's a <pre>string</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-4">
+            <details>
+                <summary>
+                    Is this a number? <pre>15</pre>
+                </summary>
+                <div class="details-content">
+                    Yes.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-5">
+            <details>
+                <summary>
+                    Is this a number? <pre>-1</pre>
+                </summary>
+                <div class="details-content">
+                    Yes.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-6">
+            <details>
+                <summary>
+                    Is this a number? <pre>0.5</pre>
+                </summary>
+                <div class="details-content">
+                    Yes.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-7">
+            <details>
+                <summary>
+                    Is this a string? <pre>""</pre>
+                </summary>
+                <div class="details-content">
+                    Yes.
+                </div>
+            </details>
+        </li>
+<hr id="section-2" />
+<h2 id=arrays-1>Arrays (1) <a class=anchor href='#arrays-1'>§</a> </h2>
+
+        <li id="question-8">
+            <details>
+                <summary>
+                    What type is this? Don't worry about syntax for now. <pre>[1, 2, 3]</pre>
+                </summary>
+                <div class="details-content">
+                    It's an array of numbers.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-9">
+            <details>
+                <summary>
+                    What type is this? Don't worry about syntax for now. <pre>["hello", "world"]</pre>
+                </summary>
+                <div class="details-content">
+                    It's an array of strings.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-10">
+            <details>
+                <summary>
+                    What type is this? Don't worry about syntax for now. <pre>["hello", 123, "world", 456]</pre>
+                </summary>
+                <div class="details-content">
+                    It's an array of strings <em>and</em> numbers.
+                </div>
+            </details>
+        </li>
+<hr id="section-3" />
+<h2 id=objects>Objects <a class=anchor href='#objects'>§</a> </h2>
+
+        <li id="question-11">
+            <details>
+                <summary>
+                    What type is this? <pre>{ a: 123 }</pre>
+                </summary>
+                <div class="details-content">
+                    It's an object.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-12">
+            <details>
+                <summary>
+                    What type is this? <pre>{ a: [1, 2, 3]}</pre>
+                </summary>
+                <div class="details-content">
+                    It's an object.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-13">
+            <details>
+                <summary>
+                    What type is this? <pre>{ a: ["hello", "world"], b: [4, 5, 6]}</pre>
+                </summary>
+                <div class="details-content">
+                    It's an object.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-14">
+            <details>
+                <summary>
+                    What type is this? <pre>{ a: { b: ["hello"]}, b: [1, 2, { c: "world" }]}</pre>
+                </summary>
+                <div class="details-content">
+                    It's an object. (We see a problem emerging. Calling all of these "an object" is a bit too vague.)
+                </div>
+            </details>
+        </li>
+<hr id="section-4" />
+<h2 id=objects-and-keys>Objects and Keys <a class=anchor href='#objects-and-keys'>§</a> </h2>
+
+        <li id="question-15">
+            <details>
+                <summary>
+                    What keys does this object have? <pre>{ a: 1, b: 2 }</pre>
+                </summary>
+                <div class="details-content">
+                    The keys are <pre>a</pre> and <pre>b</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-16">
+            <details>
+                <summary>
+                    What keys does this object have? <pre>{}</pre>
+                </summary>
+                <div class="details-content">
+                    It doesn't have any keys.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-17">
+            <details>
+                <summary>
+                    What keys does this object have? <pre>{ a: 1, b: { c: 3 }}</pre>
+                </summary>
+                <div class="details-content">
+                    The keys are <pre>a</pre> and <pre>b</pre>. Look carefully: <pre>c</pre> is not a key of this object.
+                </div>
+            </details>
+        </li>
+<hr id="section-5" />
+<h2 id=objects-and-values>Objects and Values <a class=anchor href='#objects-and-values'>§</a> </h2>
+
+        <li id="question-18">
+            <details>
+                <summary>
+                    What type are the values of this object? <pre>{ a: 1, b: 2 }</pre>
+                </summary>
+                <div class="details-content">
+                    The values are of type <pre>number</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-19">
+            <details>
+                <summary>
+                    What type are the values of this object? <pre>{ a: 'hello', b: 'world' }</pre>
+                </summary>
+                <div class="details-content">
+                    The values are of type <pre>string</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-20">
+            <details>
+                <summary>
+                    What type are the values of this object? <pre>{ a: 1, b: 'hello', c: 2, d: 'world' }</pre>
+                </summary>
+                <div class="details-content">
+                    The values are of type <pre>string</pre> and <pre>number</pre>.
+                </div>
+            </details>
+        </li>
+<hr id="section-6" />
+<h2 id=object-types>Object Types <a class=anchor href='#object-types'>§</a> </h2>
+
+        <li id="question-21">
+            <details>
+                <summary>
+                    Is it true that this object <pre>a</pre> is of type <pre>{ hello: string }</pre>?
+                        <pre class="code-block">const a = {
+    hello: 'world'
+}</pre>
+                </summary>
+                <div class="details-content">
+                    Yes: the TypeScript compiler by default remembers <em>exactly</em> which keys are in an object, but the values are degraded to more generic types.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-22">
+            <details>
+                <summary>
+                    Is it true that this object <pre>a</pre> is of type <pre>{ hello: string, myNumber: number }</pre>?
+                        <pre class="code-block">const a = {
+    hello: 'world',
+    myNumber: 123
+}</pre>
+                </summary>
+                <div class="details-content">
+                    Yes; again, the compiler remembers the keys <pre>hello</pre> and <pre>myNumber</pre> perfectly, but remembers the more generic types <pre>string</pre> and <pre>number</pre> for the values.
+                </div>
+            </details>
+        </li>
+<hr id="section-7" />
+<h2 id=annotations>Annotations <a class=anchor href='#annotations'>§</a> </h2>
+
+        <li id="question-23">
+            <details>
+                <summary>
+                    Is it true that this <pre>a</pre> is a number?
+                        <pre class="code-block">const a = 5</pre>
+                </summary>
+                <div class="details-content">
+                    Yes, <pre>a</pre> here is a number.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-24">
+            <details>
+                <summary>
+                    Is it true that <pre>a</pre> is a number? <pre>const a: number = 5</pre>
+                </summary>
+                <div class="details-content">
+                    Yes. We often don't need to, but we can add a type annotation here.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-25">
+            <details>
+                <summary>
+                    Is it true that this <pre>a</pre> is <em>of type</em> <pre>number</pre>? <pre>const a = 5</pre>
+                </summary>
+                <div class="details-content">
+                    Yes. This is just a slightly more precise way of saying the same thing.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-26">
+            <details>
+                <summary>
+                    Is it true that this <pre>a</pre> is <em>of type</em> <pre>number</pre>? <pre>const a: number = 5</pre>
+                </summary>
+                <div class="details-content">
+                    Yes. This is just a slightly more precise way of saying the same thing.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-27">
+            <details>
+                <summary>
+                    Is it true that <pre>a</pre> is of <em>type</em> <pre>5</pre>? <pre>const a: 5 = 5</pre>
+                </summary>
+                <div class="details-content">
+                    Yes. We've instructed the compiler to be even more specific with what type it remembers for this value. Instead of remembering that this value is a generic number, it makes a note that this value is the literal number 5.
+                </div>
+            </details>
+        </li>
+<hr id="section-8" />
+<h2 id=annotations-2>Annotations (2) <a class=anchor href='#annotations-2'>§</a> </h2>
+
+        <li id="question-28">
+            <details>
+                <summary>
+                    Is it true that <pre>a</pre> is of <em>type</em> <pre>10</pre>? <pre>const a = 10</pre>
+                </summary>
+                <div class="details-content">
+                    No. Without that annotation, the TypeScript compiler doesn't assume we want the literal number. For most cases, it's enough to remember that it's a <pre>number</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-29">
+            <details>
+                <summary>
+                    Will this compile without errors? <pre>const expects_string: string = 5</pre>
+                </summary>
+                <div class="details-content">
+                    No, since <pre>5</pre> does not match the type of <pre>string</pre>. The compiler tells us <pre>Type 'number' is not assignable to type 'string'</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-30">
+            <details>
+                <summary>
+                    <pre>my_number</pre> is of type <pre>number</pre>. Will this compile without errors?
+                        <pre class="code-block">const expects_five: 5 = my_number</pre>
+                </summary>
+                <div class="details-content">
+                    No. <pre>expects_five</pre> has a more specific type, and the compiler can't prove that <pre>my_number</pre> will meet the requirements of that type. It tells us <pre>Type 'number' is not assignable to type '5'</pre>. If the compiler allowed this, we'd be able to set <pre>expects_five</pre> to <pre>4</pre> in this situation, or <pre>10,000</pre> , or <pre>-8.5</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-31">
+            <details>
+                <summary>
+                    Is it true that <pre>a</pre> is of type <pre>'hello'</pre>? <pre>const a: 'hello' = 'hello'</pre>
+                </summary>
+                <div class="details-content">
+                    Yes. We can make more specific types with strings too!
+                </div>
+            </details>
+        </li>
+<hr id="section-9" />
+<h2 id=subtypes>Subtypes <a class=anchor href='#subtypes'>§</a> </h2>
+
+        <li id="question-32">
+            <details>
+                <summary>
+                    Is the value <pre>1</pre> assignable to type <pre>number</pre>?
+                </summary>
+                <div class="details-content">
+                    Yes, 1 is a value which matches <pre>number</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-33">
+            <details>
+                <summary>
+                    Is the value <pre>"hello"</pre> assignable to type <pre>number</pre>?
+                </summary>
+                <div class="details-content">
+                    No, <pre>"hello"</pre> is not a valid value for <pre>number</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-34">
+            <details>
+                <summary>
+                    Is the value <pre>"hello"</pre> assignable to type <pre>number | string</pre>?
+                </summary>
+                <div class="details-content">
+                    Yes, <pre>"hello"</pre> is a valid value for <pre>number | string</pre>, because it's a valid value for <pre>string</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-35">
+            <details>
+                <summary>
+                    Is the value <pre>123</pre> assignable to type <pre>number | string</pre>?
+                </summary>
+                <div class="details-content">
+                    Yes, <pre>123</pre> is a valid value for <pre>number | string</pre>, because it matches <pre>number</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-36">
+            <details>
+                <summary>
+                    Is it true that this <pre>a</pre> is of type <pre>'hello' | 'world'</pre>? <pre>const a: 'hello' | 'world' = 'hello'</pre>
+                </summary>
+                <div class="details-content">
+                    Yes.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-37">
+            <details>
+                <summary>
+                    Is it true that this <pre>a</pre> is of type <pre>'hello' | 'world'</pre>? <pre>const a: 'hello' = 'hello'</pre>
+                </summary>
+                <div class="details-content">
+                    No. The compiler only remembers what types it's told about, so <pre>a</pre> is of type <pre>'hello'</pre>.
+                </div>
+            </details>
+        </li>
+<hr id="section-10" />
+<h2 id=subtypes-2>Subtypes (2) <a class=anchor href='#subtypes-2'>§</a> </h2>
+
+        <li id="question-38">
+            <details>
+                <summary>
+                    Will this compile without errors?
+                        <pre class="code-block">let a: string
+const b: 'hello' = 'hello'
+a = b;</pre>
+                </summary>
+                <div class="details-content">
+                    Yes, the compiler allows <em>more specific</em> types to be assigned to variables with <em>less specific types</em>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-39">
+            <details>
+                <summary>
+                    Will this compile without errors?
+                        <pre class="code-block">let a: 'hello' | 'world';
+const b: 'hello' = 'hello';
+a = b;</pre>
+                </summary>
+                <div class="details-content">
+                    Yes, the compiler allows <em>more specific</em> types to be assigned to variables with <em>less specific types</em>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-40">
+            <details>
+                <summary>
+                    Will this compile without errors?
+                        <pre class="code-block">function returnsHelloOrWorld(): 'hello' | 'world' {
+    return 'hello';
+}
+let a: 'hello' = returnsHelloOrWorld()</pre>
+                </summary>
+                <div class="details-content">
+                    No, the compiler will report <pre>'hello' | 'world'</pre> is not assignable to type <pre>'hello'</pre>. For all it knows, the returned value is <pre>'world'</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-41">
+            <details>
+                <summary>
+                    Will this compile without errors?
+                        <pre class="code-block">function returnsHelloOrWorld() {
+    return 'hello';
+}
+let a: 'hello' = returnsHelloOrWorld()</pre>
+                </summary>
+                <div class="details-content">
+                    No. Without a return type annotation, the compiler infers that the function returns a <pre>string</pre>, and doesn't allow it to be assigned to a variable with a more specific type <pre>'hello'</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-42">
+            <details>
+                <summary>
+                    Will this compile without errors?
+                        <pre class="code-block">function returnsHelloOrWorld(): 'hello' {
+    return 'hello';
+}
+let a: 'hello' = returnsHelloOrWorld()</pre>
+                </summary>
+                <div class="details-content">
+                    Yes, the annotation tells the compiler that the function returns <pre>'hello'</pre>, so it can be assigned to the variable <pre>a</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-43">
+            <details>
+                <summary>
+                    Will this compile without errors?
+                        <pre class="code-block">function returnsHelloOrWorld(): 'hello' {
+    return 'world';
+}
+let a: 'hello' = returnsHelloOrWorld()</pre>
+                </summary>
+                <div class="details-content">
+                    No, the compiler checks that the return value matches the annotation on a function.
+                </div>
+            </details>
+        </li>
+<hr id="section-11" />
+<h2 id=arrays-2>Arrays (2) <a class=anchor href='#arrays-2'>§</a> </h2>
+
+        <li id="question-44">
+            <details>
+                <summary>
+                    What type is this? <pre>[1, 2, 3]</pre>
+                </summary>
+                <div class="details-content">
+                    An array of numbers. In TypeScript we can write this as <pre>Array&lt;number&gt;</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-45">
+            <details>
+                <summary>
+                    What type is this? <pre>["hello", "world"]</pre>
+                </summary>
+                <div class="details-content">
+                    An array of strings. In TypeScript we can write this as <pre>Array&lt;string&gt;</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-46">
+            <details>
+                <summary>
+                    What type is this? <pre>[1, "hello", 2, "world"]</pre>
+                </summary>
+                <div class="details-content">
+                    An array of strings and numbers. In TypeScript we can write this as <pre>Array&lt;string | number&gt;</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-47">
+            <details>
+                <summary>
+                    What type is <pre>list</pre> here?
+                        <pre class="code-block">const a: 'hello' = 'hello';
+const b: 'world' = 'world;
+const list = [a, b];</pre>
+                </summary>
+                <div class="details-content">
+                    <pre>list</pre> is of type <pre>Array&lt;'hello' | 'world'&gt;</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-48">
+            <details>
+                <summary>
+                    Is <pre>[1, 2, 3]</pre> of type <pre>number[]</pre>?
+                </summary>
+                <div class="details-content">
+                    Yes, <pre>number[]</pre> is another way of writing <pre>Array&lt;number&gt;</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-49">
+            <details>
+                <summary>
+                    Is <pre>["hello", "world"]</pre> of type <pre>string[]</pre>
+                </summary>
+                <div class="details-content">
+                    Yes, <pre>string[]</pre> is another way of writing <pre>Array&lt;string&gt;</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-50">
+            <details>
+                <summary>
+                    Is <pre>list</pre> here of type <pre>('hello' | 'world')[]</pre>?
+                        <pre class="code-block">const a: 'hello' = 'hello';
+const b: 'world' = 'world;
+const list = [a, b];</pre>
+                </summary>
+                <div class="details-content">
+                    Yes, <pre>list</pre> is of type <pre>Array&lt;'hello' | 'world'&gt;</pre>, which can also be written as <pre>('hello' | 'world')[]</pre>. Round brackets here are just used to group types together.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-51">
+            <details>
+                <summary>
+                    Is <pre>Array&lt;number&gt;</pre> the same type as <pre>number[]</pre>?
+                </summary>
+                <div class="details-content">
+                    Yes, <pre>Array&lt;something&gt;</pre> and <pre>something[]</pre> are two ways of writing the same thing. They refer to exactly the same type.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-52">
+            <details>
+                <summary>
+                    Is there a value which can be an <pre>Array&lt;number&gt;</pre>, but not a <pre>number[]</pre>?
+                </summary>
+                <div class="details-content">
+                    No, because the two types are the same, they have exactly the same possible values.
+                </div>
+            </details>
+        </li>
+<hr id="section-12" />
+<h2 id=promises>Promises <a class=anchor href='#promises'>§</a> </h2>
+
+        <li id="question-53">
+            <details>
+                <summary>
+                    Is <pre>Promise.resolve(15)</pre> of type <pre>Promise&lt;number&gt;</pre>?
+                </summary>
+                <div class="details-content">
+                    Yes, <pre>Promise&lt;number&gt;</pre> is a type which means a promise which <em>resolves to</em> a number.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-54">
+            <details>
+                <summary>
+                    What type is <pre>a</pre> here?
+                        <pre class="code-block">async function f() {
+	return 123;
+}
+const a = f();</pre>
+                </summary>
+                <div class="details-content">
+                    <pre>a</pre> is a <pre>Promise&lt;number&gt;</pre>. Async functions return promises which resolve to the values they return. This has the same effect as writing <pre>Promise.resolve(123)</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-55">
+            <details>
+                <summary>
+                    What type is <pre>a</pre> here?
+                        <pre class="code-block">async function f() {
+	return Promise.resolve(123);
+}
+const a = f();</pre>
+                </summary>
+                <div class="details-content">
+                    <pre>a</pre> is a <pre>Promise&lt;number&gt;</pre>. Nested promises get "flattened".
+                </div>
+            </details>
+        </li>
+
+        <li id="question-56">
+            <details>
+                <summary>
+                    What type is <pre>a</pre>?
+                        <pre class="code-block">const a = Promise.resolve(Promise.resolve(Promise.resolve(123)))</pre>
+                </summary>
+                <div class="details-content">
+                    <pre>a</pre> is a <pre>Promise&lt;number&gt;</pre>. Nested promises get "flattened".
+                </div>
+            </details>
+        </li>
+<hr id="section-13" />
+<h2 id=types-with-parameters>Types with parameters <a class=anchor href='#types-with-parameters'>§</a> </h2>
+
+        <li id="question-57">
+            <details>
+                <summary>
+                    What type is <pre>a</pre>?
+                        <pre class="code-block">const a = Promise.resolve([1, 2, 3]);</pre>
+                </summary>
+                <div class="details-content">
+                    <pre>a</pre> is a <pre>Promise&lt;Array&lt;number&gt;&gt;</pre>. It's a promise <em>of</em> an array <em>of</em> numbers.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-58">
+            <details>
+                <summary>
+                    What type is <pre>a</pre> here?
+                        <pre class="code-block">async function f() {
+	return [1, 2, 3]
+}
+const a = f()</pre>
+                </summary>
+                <div class="details-content">
+                    <pre>a</pre> is a <pre>Promise&lt;Array&lt;number&gt;&gt;</pre>. It's a promise <em>of</em> an array <em>of</em> numbers.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-59">
+            <details>
+                <summary>
+                    Is <pre>Promise&lt;Array&lt;number&gt;&gt;</pre> the same type as <pre>Promise&lt;number[]&gt;</pre>?
+                </summary>
+                <div class="details-content">
+                    Yes, because <pre>Array&lt;number&gt;</pre> is the same type as <pre>number[]</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-60">
+            <details>
+                <summary>
+                    What type is <pre>a</pre>?
+                        <pre class="code-block">const h: 'hello' = 'hello';
+const a = Promise.resolve(h);</pre>
+                </summary>
+                <div class="details-content">
+                    <pre>a</pre> is a <pre>Promise&lt;'hello'&gt;</pre>. It's a promise which resolves to a value of type <pre>'hello'</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-61">
+            <details>
+                <summary>
+                    Is <pre>Promise.resolve("hello")</pre> a <pre>Promise&lt;'hello'&gt;</pre>?
+                </summary>
+                <div class="details-content">
+                    No, by default the compiler will only infer strings as <pre>string</pre>, not anything more specific. <pre>Promise.resolve("hello")</pre> is a <pre>Promise&lt;string&gt;</pre>.
+                </div>
+            </details>
+        </li>
+<hr id="section-14" />
+<h2 id=nested-arrays>Nested Arrays <a class=anchor href='#nested-arrays'>§</a> </h2>
+
+        <li id="question-62">
+            <details>
+                <summary>
+                    What type is <pre>a</pre>?
+                        <pre class="code-block">const a = [
+	[1, 2, 3],
+	[4, 5, 6]
+];</pre>
+                </summary>
+                <div class="details-content">
+                    <pre>a</pre> is of type <pre>Array&lt;Array&lt;number&gt;&gt;</pre>. It's an array of arrays of numbers.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-63">
+            <details>
+                <summary>
+                    Is <pre>a</pre> an <pre>Array&lt;Array&lt;string&gt;&gt;</pre>?
+                        <pre class="code-block">const a = [
+	["hello", "world"]
+]</pre>
+                </summary>
+                <div class="details-content">
+                    Yes, <pre>a</pre> is an <pre>Array&lt;Array&lt;string&gt;&gt;</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-64">
+            <details>
+                <summary>
+                    Is <pre>a</pre> a <pre>string[][]</pre>?
+                        <pre class="code-block">const a = [
+	["hello", "world"]
+]</pre>
+                </summary>
+                <div class="details-content">
+                    Yes, <pre>a</pre> is an <pre>Array&lt;Array&lt;string&gt;&gt;</pre>, which can also be written as <pre>string[][]</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-65">
+            <details>
+                <summary>
+                    What type is <pre>a</pre> here?
+                        <pre class="code-block">async function f() {
+	return [
+		["hello", "world"]
+	]
+}
+const a = f();</pre>
+                </summary>
+                <div class="details-content">
+                    Yes, <pre>a</pre> is a <pre>Promise&lt;string[][]&gt;</pre>, or alternatively a <pre>Promise&lt;Array&lt;Array&lt;string&gt;&gt;&gt;</pre>. It's a Promise which will resolve to a value of type <pre>string[][]</pre>.
+                </div>
+            </details>
+        </li>
+<hr id="section-15" />
+<h2 id=aliases>Aliases <a class=anchor href='#aliases'>§</a> </h2>
+
+        <li id="question-66">
+            <details>
+                <summary>
+                    Is <pre>NumberAlias</pre> a type alias for <pre>number</pre>?
+                        <pre class="code-block">type NumberAlias = number</pre>
+                </summary>
+                <div class="details-content">
+                    Yes, <pre>NumberAlias</pre> is now a type alias for <pre>number</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-67">
+            <details>
+                <summary>
+                    Is <pre>NewAlias</pre> a type alias for <pre>number</pre>?
+                        <pre class="code-block">type NewAlias = NumberAlias</pre>
+                </summary>
+                <div class="details-content">
+                    Yes, setting one alias for another will set the new alias to the original type.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-68">
+            <details>
+                <summary>
+                    Will this compile without errors?
+                        <pre class="code-block">type NumberAlias = number
+const a: NumberAlias = 123;</pre>
+                </summary>
+                <div class="details-content">
+                    Yes, <pre>NumberAlias</pre> is an alias for <pre>number</pre>, so this is the same as writing <pre>const a: number = 123</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-69">
+            <details>
+                <summary>
+                    Will this compile without errors?
+                        <pre class="code-block">type NumberAlias = number
+type NewAlias = NumberAlias
+const a: NewAlias = 123;</pre>
+                </summary>
+                <div class="details-content">
+                    Yes, <pre>NewAlias</pre> is another alias for <pre>number</pre>, so this is the same as writing <pre>const a: number = 123</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-70">
+            <details>
+                <summary>
+                    Will this compile without errors?
+                        <pre class="code-block">type NumberAlias = number
+type NewAlias = NumberAlias
+const a: NewAlias = 'hello';</pre>
+                </summary>
+                <div class="details-content">
+                    No, <pre>NewAlias</pre> is another alias for <pre>number</pre>, so this is the same as writing <pre>const a: number = 'hello'</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-71">
+            <details>
+                <summary>
+                    Is there a value which matches <pre>NumberAlias</pre> which doesn't match <pre>number</pre>?
+                </summary>
+                <div class="details-content">
+                    No, <pre>NumberAlias</pre> is exactly the same type as <pre>number</pre>, so all the same values will match both of them.
+                </div>
+            </details>
+        </li>
+<hr id="section-16" />
+<h2 id=aliases-for-types-with-parameters>Aliases for types with parameters <a class=anchor href='#aliases-for-types-with-parameters'>§</a> </h2>
+
+        <li id="question-72">
+            <details>
+                <summary>
+                    What is type <pre>Mystery</pre> here?
+                        <pre class="code-block">type A = number
+type B = Array&lt;A&gt;
+type Mystery = Promise&lt;B&gt;</pre>
+                </summary>
+                <div class="details-content">
+                    <pre>Mystery</pre> is an alias for <pre>Promise&lt;Array&lt;number&gt;&gt;</pre>, or equivalently <pre>Promise&lt;number[]&gt;</pre>. Aliases don't create any new types, they're just new names for existing ones that can save some typing.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-73">
+            <details>
+                <summary>
+                    What is type <pre>Puzzle</pre> here?
+                        <pre class="code-block">type A = 'hello' | 'world'
+type B = Array&lt;Promise&lt;A&gt;&gt;
+type Puzzle = B | A</pre>
+                </summary>
+                <div class="details-content">
+                    <pre>Puzzle</pre> is of type <pre>Array&lt;Promise&lt;'hello' | 'world'&gt;&gt; | 'hello' | 'world'</pre>. Aliases are replaced like-for-like with the types they refer to.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-74">
+            <details>
+                <summary>
+                    Does <pre>'hello'</pre> match the type <pre>Puzzle</pre> above?
+                </summary>
+                <div class="details-content">
+                    Yes, <pre>'hello'</pre> is one of the possible values for type <pre>Array&lt;Promise&lt;'hello' | 'world'&gt;&gt; | 'hello' | 'world'</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-75">
+            <details>
+                <summary>
+                    Does <pre>[ Promise.resolve('world') ]</pre> match the type <pre>Puzzle</pre> above?
+                </summary>
+                <div class="details-content">
+                    Yes, that's one of the possible values for type <pre>Array&lt;Promise&lt;'hello' | 'world'&gt;&gt; | 'hello' | 'world'</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-76">
+            <details>
+                <summary>
+                    Does this compile without errors?
+                        <pre class="code-block">type A = Array&lt;number&gt;
+type B = Promise&lt;string&gt;
+const a: A | B = [ Promise.resolve('123') ];</pre>
+                </summary>
+                <div class="details-content">
+                    No, <pre>[ Promise.resolve('123') ]</pre> is of type <pre>Array&lt;Promise&lt;string&gt;&gt;</pre>, which isn't assignable to either <pre>Array&lt;number&gt;</pre> or <pre>Promise&lt;string&gt;</pre>, so therefore isn't assignable to <pre>Array&lt;number&gt; | Promise&lt;string&gt;</pre>, which is written here with aliases as <pre>A | B</pre>.
+                </div>
+            </details>
+        </li>
+<hr id="section-17" />
+<h2 id=aliases-with-parameters>Aliases with parameters <a class=anchor href='#aliases-with-parameters'>§</a> </h2>
+
+        <li id="question-77">
+            <details>
+                <summary>
+                    What is type <pre>Mystery</pre> here?
+                        <pre class="code-block">type MakeArray&lt;T&gt; = Array&lt;T&gt;
+type Mystery = MakeArray&lt;number&gt;</pre>
+                </summary>
+                <div class="details-content">
+                    <pre>Mystery</pre> is the type <pre>Array&lt;number&gt;</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-78">
+            <details>
+                <summary>
+                    What is type <pre>Puzzle</pre> here?
+                        <pre class="code-block">type MakePromise&lt;TypeParameter&gt; = Promise&lt;TypeParameter&gt;
+type Puzzle = MakePromise&lt;number&gt;</pre>
+                </summary>
+                <div class="details-content">
+                    <pre>Puzzle</pre> is a <pre>Promise&lt;number&gt;</pre>. The type <pre>number</pre> is passed to the parameter <pre>TypeParameter</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-79">
+            <details>
+                <summary>
+                    In <pre>type MyType&lt;MyParam&gt; = ...</pre>, is <pre>MyParam</pre> a type parameter?
+                </summary>
+                <div class="details-content">
+                    Yes.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-80">
+            <details>
+                <summary>
+                    In <pre>type MyType&lt;OneParam, AnotherParam&gt; = ...</pre>, how many type parameters are there?
+                </summary>
+                <div class="details-content">
+                    Two: <pre>OneParam</pre> and <pre>AnotherParam</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-81">
+            <details>
+                <summary>
+                    In <pre>type A&lt;T&gt; = ...</pre>, is <pre>A</pre> a parameterised type?
+                </summary>
+                <div class="details-content">
+                    Yes, because it has a parameter <pre>T</pre>, <pre>A</pre> is a parameterised type.
+                </div>
+            </details>
+        </li>
+<hr id="section-18" />
+<h2 id=aliases-for-types-with-parameters-2>Aliases for types with parameters (2) <a class=anchor href='#aliases-for-types-with-parameters-2'>§</a> </h2>
+
+        <li id="question-82">
+            <details>
+                <summary>
+                    What is type <pre>A</pre> here?
+                        <pre class="code-block">type SomeType&lt;ParamOne, ParamTwo&gt; = Array&lt;ParamOne | ParamTwo&gt;;
+type A = SomeType&lt;number, string&gt;</pre>
+                </summary>
+                <div class="details-content">
+                    Type <pre>A</pre> is <pre>Array&lt;number | string&gt;</pre>. <pre>number</pre> is passed in as <pre>ParamOne</pre>, and <pre>string</pre> is passed as <pre>ParamTwo</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-83">
+            <details>
+                <summary>
+                    Do type parameters need to be a single character?
+                </summary>
+                <div class="details-content">
+                    No, as in the examples above, type names can be any number of characters.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-84">
+            <details>
+                <summary>
+                    Does this compile without errors?
+                        <pre class="code-block">type SomeType&lt;ParamOne, ParamTwo&gt; = Array&lt;ParamOne | ParamTwo&gt;;
+type A = SomeType&lt;number, string&gt;
+const a: A = [1, 2, "hello"]</pre>
+                </summary>
+                <div class="details-content">
+                    Yes, <pre>a</pre> is an <pre>Array&lt;string | number&gt;</pre>, so it matches the type referenced by the alias <pre>A</pre>.
+                </div>
+            </details>
+        </li>
+
+        <li id="question-85">
+            <details>
+                <summary>
+                    Does this compile without errors?
+                        <pre class="code-block">type SomeType&lt;ParamOne, ParamTwo&gt; = Array&lt;ParamOne | ParamTwo&gt;;
+type A = SomeType&lt;number, string&gt;
+const a: A = [1, 2, 3]</pre>
+                </summary>
+                <div class="details-content">
+                    Yes, <pre>a</pre> is a <pre>number[]</pre>, so it matches the type referenced by the alias <pre>A</pre>.
+                </div>
+            </details>
+        </li>
+</ol>
+</body>
