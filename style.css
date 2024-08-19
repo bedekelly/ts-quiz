@@ -60,9 +60,14 @@ h2 {
     font-size: 0.7em;
 }
 
+.question-anchor {
+  padding-left: 1em;
+}
+
 /* .ts-playground {
   position: absolute;
   bottom: 0;
   right: 0;
   padding: 5px;
 } */
+

@@ -96,7 +96,9 @@ with open("data.md") as f:
         <li id="question-{question_no}">
             <details>
                 <summary>
-                    {question}"""
+                    {question}
+                    <a class='anchor question-anchor' href='#question-{question_no}'>¶</a>
+"""
                 + (
                     """<pre class="code-block">{}</pre>""".format(
                         code_block.replace("<", "&lt;").replace(">", "&gt;"),
