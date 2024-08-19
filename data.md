@@ -178,7 +178,7 @@ What type is this? `[1, "hello", 2, "world"]` -- an array of strings and numbers
 What type is `list` here?
 ```typescript
 const a: 'hello' = 'hello';
-const b: 'world' = 'world;
+const b: 'world' = 'world';
 const list = [a, b];
 ```
 -- `list` is of type `Array<'hello' | 'world'>`.
@@ -190,7 +190,7 @@ Is `["hello", "world"]` of type `string[]` -- yes, `string[]` is another way of 
 Is `list` here of type `('hello' | 'world')[]`?
 ```typescript
 const a: 'hello' = 'hello';
-const b: 'world' = 'world;
+const b: 'world' = 'world';
 const list = [a, b];
 ```
 -- yes, `list` is of type `Array<'hello' | 'world'>`, which can also be written as `('hello' | 'world')[]`. Round brackets here are just used to group types together.
