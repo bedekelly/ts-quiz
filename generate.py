@@ -109,7 +109,7 @@ with open("data.md") as f:
                 + f"""
                 </summary>
                 <div class="details-content">
-                    {answer}{' <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/{}">Try it online 🡒</a>'.format(lz.compressToEncodedURIComponent(code_block))if code_block else ''}
+                    {answer}{' <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/{}">Try&nbsp;it&nbsp;online&nbsp;🡒</a>'.format(lz.compressToEncodedURIComponent(code_block))if code_block else ''}
                 </div>
             </details>
         </li>"""

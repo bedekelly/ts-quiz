@@ -292,7 +292,7 @@
 }</pre>
                 </summary>
                 <div class="details-content">
-                    Yes: the TypeScript compiler by default remembers <em>exactly</em> which keys are in an object, but the values are degraded to more generic types. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBAhjAvDA3gKBpmALApgG3xAC4YByAdxACd8ATMtAXyA">Try it online 🡒</a>
+                    Yes: the TypeScript compiler by default remembers <em>exactly</em> which keys are in an object, but the values are degraded to more generic types. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBAhjAvDA3gKBpmALApgG3xAC4YByAdxACd8ATMtAXyA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -308,7 +308,7 @@
 }</pre>
                 </summary>
                 <div class="details-content">
-                    Yes; again, the compiler remembers the keys <pre>hello</pre> and <pre>myNumber</pre> perfectly, but remembers the more generic types <pre>string</pre> and <pre>number</pre> for the values. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBAhjAvDA3gKBpmALApgG3xAC4YByAdxACd8ATMgGgywFsBPAOQFdWAjXNVIBGAEwBmNAF8gA">Try it online 🡒</a>
+                    Yes; again, the compiler remembers the keys <pre>hello</pre> and <pre>myNumber</pre> perfectly, but remembers the more generic types <pre>string</pre> and <pre>number</pre> for the values. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBAhjAvDA3gKBpmALApgG3xAC4YByAdxACd8ATMgGgywFsBPAOQFdWAjXNVIBGAEwBmNAF8gA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -323,7 +323,7 @@
 <pre class="code-block">const a = 5</pre>
                 </summary>
                 <div class="details-content">
-                    Yes, <pre>a</pre> here is a number. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBAhjAvDArEA">Try it online 🡒</a>
+                    Yes, <pre>a</pre> here is a number. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBAhjAvDArEA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -416,7 +416,7 @@
 <pre class="code-block">const expects_five: 5 = my_number</pre>
                 </summary>
                 <div class="details-content">
-                    No. <pre>expects_five</pre> has a more specific type, and the compiler can't prove that <pre>my_number</pre> will meet the requirements of that type. It tells us <pre>Type 'number' is not assignable to type '5'</pre>. If the compiler allowed this, we'd be able to set <pre>expects_five</pre> to <pre>4</pre> in this situation, or <pre>10,000</pre> , or <pre>-8.5</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBApgDwA52FCB9AZgSwG5wBcMArDALwwC2AnhmAK5UBGcATkA">Try it online 🡒</a>
+                    No. <pre>expects_five</pre> has a more specific type, and the compiler can't prove that <pre>my_number</pre> will meet the requirements of that type. It tells us <pre>Type 'number' is not assignable to type '5'</pre>. If the compiler allowed this, we'd be able to set <pre>expects_five</pre> to <pre>4</pre> in this situation, or <pre>10,000</pre> , or <pre>-8.5</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBApgDwA52FCB9AZgSwG5wBcMArDALwwC2AnhmAK5UBGcATkA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -526,7 +526,7 @@ const b: 'hello' = 'hello'
 a = b;</pre>
                 </summary>
                 <div class="details-content">
-                    Yes, the compiler allows <em>more specific</em> types to be assigned to variables with <em>less specific types</em>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/DYUwLgBAhgXBDOYBOBLAdgcwFAGMD2aiEARnAOQAWIwweZEAvBJdbWVlIyQNxA">Try it online 🡒</a>
+                    Yes, the compiler allows <em>more specific</em> types to be assigned to variables with <em>less specific types</em>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/DYUwLgBAhgXBDOYBOBLAdgcwFAGMD2aiEARnAOQAWIwweZEAvBJdbWVlIyQNxA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -541,7 +541,7 @@ const b: 'hello' = 'hello';
 a = b;</pre>
                 </summary>
                 <div class="details-content">
-                    Yes, the compiler allows <em>more specific</em> types to be assigned to variables with <em>less specific types</em>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/DYUwLgBAhgXBDkALExgHt4QD4IO5oCdgATeAbgCgBjNAOwGdIAjOJFdTAXgWVQ0qgRuTMkA">Try it online 🡒</a>
+                    Yes, the compiler allows <em>more specific</em> types to be assigned to variables with <em>less specific types</em>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/DYUwLgBAhgXBDkALExgHt4QD4IO5oCdgATeAbgCgBjNAOwGdIAjOJFdTAXgWVQ0qgRuTMkA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -557,7 +557,7 @@ a = b;</pre>
 let a: 'hello' = returnsHelloOrWorld()</pre>
                 </summary>
                 <div class="details-content">
-                    No, the compiler will report <pre>'hello' | 'world'</pre> is not assignable to type <pre>'hello'</pre>. For all it knows, the returned value is <pre>'world'</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/GYVwdgxgLglg9mABAJwKZRMsBnAEqgGwLgHlkB1OZAgEwAoBKALkQHIALQ41xAHzYDuVWjwDeAKERSU6TEg5c4rANziAvuILpEAQxYKiSxAF4ZGLHkVlK1egyA">Try it online 🡒</a>
+                    No, the compiler will report <pre>'hello' | 'world'</pre> is not assignable to type <pre>'hello'</pre>. For all it knows, the returned value is <pre>'world'</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/GYVwdgxgLglg9mABAJwKZRMsBnAEqgGwLgHlkB1OZAgEwAoBKALkQHIALQ41xAHzYDuVWjwDeAKERSU6TEg5c4rANziAvuILpEAQxYKiSxAF4ZGLHkVlK1egyA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -573,7 +573,7 @@ let a: 'hello' = returnsHelloOrWorld()</pre>
 let a: 'hello' = returnsHelloOrWorld()</pre>
                 </summary>
                 <div class="details-content">
-                    No. Without a return type annotation, the compiler infers that the function returns a <pre>string</pre>, and doesn't allow it to be assigned to a variable with a more specific type <pre>'hello'</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/GYVwdgxgLglg9mABAJwKZRMsBnAEqgGwLgHlkB1OZAgEwAoBKRAbwChEOV1MkByAC0LFeAblYBfVgXSIAhgC5EAoXF6IAvFwxY8KspWr0GQA">Try it online 🡒</a>
+                    No. Without a return type annotation, the compiler infers that the function returns a <pre>string</pre>, and doesn't allow it to be assigned to a variable with a more specific type <pre>'hello'</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/GYVwdgxgLglg9mABAJwKZRMsBnAEqgGwLgHlkB1OZAgEwAoBKRAbwChEOV1MkByAC0LFeAblYBfVgXSIAhgC5EAoXF6IAvFwxY8KspWr0GQA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -589,7 +589,7 @@ let a: 'hello' = returnsHelloOrWorld()</pre>
 let a: 'hello' = returnsHelloOrWorld()</pre>
                 </summary>
                 <div class="details-content">
-                    Yes, the annotation tells the compiler that the function returns <pre>'hello'</pre>, so it can be assigned to the variable <pre>a</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/GYVwdgxgLglg9mABAJwKZRMsBnAEqgGwLgHlkB1OZAgEwAoBKALkQHIALQ41xAbwChEQlOkxIOXOKwDc-AL78C6RAEMWEolMQBeERix5JZStXoMgA">Try it online 🡒</a>
+                    Yes, the annotation tells the compiler that the function returns <pre>'hello'</pre>, so it can be assigned to the variable <pre>a</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/GYVwdgxgLglg9mABAJwKZRMsBnAEqgGwLgHlkB1OZAgEwAoBKALkQHIALQ41xAbwChEQlOkxIOXOKwDc-AL78C6RAEMWEolMQBeERix5JZStXoMgA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -605,7 +605,7 @@ let a: 'hello' = returnsHelloOrWorld()</pre>
 let a: 'hello' = returnsHelloOrWorld()</pre>
                 </summary>
                 <div class="details-content">
-                    No, the compiler checks that the return value matches the annotation on a function. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/GYVwdgxgLglg9mABAJwKZRMsBnAEqgGwLgHlkB1OZAgEwAoBKALkQHIALQ41xAbwChEQlOkxJWAdyq1WAbn4BffgXSIAhiw5c4PALwiMWPNrKVq9BkA">Try it online 🡒</a>
+                    No, the compiler checks that the return value matches the annotation on a function. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/GYVwdgxgLglg9mABAJwKZRMsBnAEqgGwLgHlkB1OZAgEwAoBKALkQHIALQ41xAbwChEQlOkxJWAdyq1WAbn4BffgXSIAhiw5c4PALwiMWPNrKVq9BkA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -661,7 +661,7 @@ const b: 'world' = 'world;
 const list = [a, b];</pre>
                 </summary>
                 <div class="details-content">
-                    <pre>list</pre> is of type <pre>Array&lt;'hello' | 'world'&gt;</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBAhgLhgcgBYFMA2mTJgXhQ21wG4AoUSWAIyWQHcQAnTAEz0MZfYquhiYAlgMIBtOABoYNALqkgA">Try it online 🡒</a>
+                    <pre>list</pre> is of type <pre>Array&lt;'hello' | 'world'&gt;</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBAhgLhgcgBYFMA2mTJgXhQ21wG4AoUSWAIyWQHcQAnTAEz0MZfYquhiYAlgMIBtOABoYNALqkgA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -702,7 +702,7 @@ const b: 'world' = 'world;
 const list = [a, b];</pre>
                 </summary>
                 <div class="details-content">
-                    Yes, <pre>list</pre> is of type <pre>Array&lt;'hello' | 'world'&gt;</pre>, which can also be written as <pre>('hello' | 'world')[]</pre>. Round brackets here are just used to group types together. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBAhgLhgcgBYFMA2mTJgXhQ21wG4AoUSWAIyWQHcQAnTAEz0MZfYquhiYAlgMIBtOABoYNALqkgA">Try it online 🡒</a>
+                    Yes, <pre>list</pre> is of type <pre>Array&lt;'hello' | 'world'&gt;</pre>, which can also be written as <pre>('hello' | 'world')[]</pre>. Round brackets here are just used to group types together. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBAhgLhgcgBYFMA2mTJgXhQ21wG4AoUSWAIyWQHcQAnTAEz0MZfYquhiYAlgMIBtOABoYNALqkgA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -759,7 +759,7 @@ const list = [a, b];</pre>
 const a = f();</pre>
                 </summary>
                 <div class="details-content">
-                    <pre>a</pre> is a <pre>Promise&lt;number&gt;</pre>. Async functions return promises which resolve to the values they return. This has the same effect as writing <pre>Promise.resolve(123)</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/IYZwngdgxgBAZgV2gFwJYHsLwBQEoYDeAUAJABOApsgmVgIwBMAzANxEC+RUmIyMwMALw5cLIA">Try it online 🡒</a>
+                    <pre>a</pre> is a <pre>Promise&lt;number&gt;</pre>. Async functions return promises which resolve to the values they return. This has the same effect as writing <pre>Promise.resolve(123)</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/IYZwngdgxgBAZgV2gFwJYHsLwBQEoYDeAUAJABOApsgmVgIwBMAzANxEC+RUmIyMwMALw5cLIA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -775,7 +775,7 @@ const a = f();</pre>
 const a = f();</pre>
                 </summary>
                 <div class="details-content">
-                    <pre>a</pre> is a <pre>Promise&lt;number&gt;</pre>. Nested promises get "flattened". <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/IYZwngdgxgBAZgV2gFwJYHsLwBQEoYDeAUAJABOApsgmVgApnoC2qIFAdJSOgDYBuFbAEYATAGZcAbiIBfIlEwhkMYDAC8OKUA">Try it online 🡒</a>
+                    <pre>a</pre> is a <pre>Promise&lt;number&gt;</pre>. Nested promises get "flattened". <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/IYZwngdgxgBAZgV2gFwJYHsLwBQEoYDeAUAJABOApsgmVgApnoC2qIFAdJSOgDYBuFbAEYATAGZcAbiIBfIlEwhkMYDAC8OKUA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -788,7 +788,7 @@ const a = f();</pre>
 <pre class="code-block">const a = Promise.resolve(Promise.resolve(Promise.resolve(123)))</pre>
                 </summary>
                 <div class="details-content">
-                    <pre>a</pre> is a <pre>Promise&lt;number&gt;</pre>. Nested promises get "flattened". <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBAhjAvDACgJxAWwJYQKYB0aeEIANgG54AU6WuhxplNdO+RJ5V1AjAEwBmAJSigA">Try it online 🡒</a>
+                    <pre>a</pre> is a <pre>Promise&lt;number&gt;</pre>. Nested promises get "flattened". <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBAhjAvDACgJxAWwJYQKYB0aeEIANgG54AU6WuhxplNdO+RJ5V1AjAEwBmAJSigA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -803,7 +803,7 @@ const a = f();</pre>
 <pre class="code-block">const a = Promise.resolve([1, 2, 3]);</pre>
                 </summary>
                 <div class="details-content">
-                    <pre>a</pre> is a <pre>Promise&lt;Array&lt;number&gt;&gt;</pre>. It's a promise <em>of</em> an array <em>of</em> numbers. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBAhjAvDACgJxAWwJYQKYB0aeEIANgG54AUA2gIwA0MATMwMwC6AlANxA">Try it online 🡒</a>
+                    <pre>a</pre> is a <pre>Promise&lt;Array&lt;number&gt;&gt;</pre>. It's a promise <em>of</em> an array <em>of</em> numbers. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBAhjAvDACgJxAWwJYQKYB0aeEIANgG54AUA2gIwA0MATMwMwC6AlANxA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -819,7 +819,7 @@ const a = f();</pre>
 const a = f()</pre>
                 </summary>
                 <div class="details-content">
-                    <pre>a</pre> is a <pre>Promise&lt;Array&lt;number&gt;&gt;</pre>. It's a promise <em>of</em> an array <em>of</em> numbers. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/IYZwngdgxgBAZgV2gFwJYHsLwBQEoYDeAUAJABOApsgmVgNoCMANDAEwsDMAukQL5FRMIZDGAwAvDlxA">Try it online 🡒</a>
+                    <pre>a</pre> is a <pre>Promise&lt;Array&lt;number&gt;&gt;</pre>. It's a promise <em>of</em> an array <em>of</em> numbers. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/IYZwngdgxgBAZgV2gFwJYHsLwBQEoYDeAUAJABOApsgmVgNoCMANDAEwsDMAukQL5FRMIZDGAwAvDlxA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -846,7 +846,7 @@ const a = f()</pre>
 const a = Promise.resolve(h);</pre>
                 </summary>
                 <div class="details-content">
-                    <pre>a</pre> is a <pre>Promise&lt;'hello'&gt;</pre>. It's a promise which resolves to a value of type <pre>'hello'</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBAFgLhgcjgUwDYZMmBeFdLHAbgChRJYBDfGABQCcQBbASwjQDpG0IQMANzQAKOAEoSQA">Try it online 🡒</a>
+                    <pre>a</pre> is a <pre>Promise&lt;'hello'&gt;</pre>. It's a promise which resolves to a value of type <pre>'hello'</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBAFgLhgcjgUwDYZMmBeFdLHAbgChRJYBDfGABQCcQBbASwjQDpG0IQMANzQAKOAEoSQA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -877,7 +877,7 @@ const a = Promise.resolve(h);</pre>
 ];</pre>
                 </summary>
                 <div class="details-content">
-                    <pre>a</pre> is of type <pre>Array&lt;Array&lt;number&gt;&gt;</pre>. It's an array of arrays of numbers. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBAhjAvDA2gKAJAoIwBoYBM+AzALq6YoAs+ArPgGylqkDcQA">Try it online 🡒</a>
+                    <pre>a</pre> is of type <pre>Array&lt;Array&lt;number&gt;&gt;</pre>. It's an array of arrays of numbers. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBAhjAvDA2gKAJAoIwBoYBM+AzALq6YoAs+ArPgGylqkDcQA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -892,7 +892,7 @@ const a = Promise.resolve(h);</pre>
 ]</pre>
                 </summary>
                 <div class="details-content">
-                    Yes, <pre>a</pre> is an <pre>Array&lt;Array&lt;string&gt;&gt;</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBAhjAvDA2gKAJAoEQAsCmANoSNgDQzYDuIAToQCbYC6azQA">Try it online 🡒</a>
+                    Yes, <pre>a</pre> is an <pre>Array&lt;Array&lt;string&gt;&gt;</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBAhjAvDA2gKAJAoEQAsCmANoSNgDQzYDuIAToQCbYC6azQA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -907,7 +907,7 @@ const a = Promise.resolve(h);</pre>
 ]</pre>
                 </summary>
                 <div class="details-content">
-                    Yes, <pre>a</pre> is an <pre>Array&lt;Array&lt;string&gt;&gt;</pre>, which can also be written as <pre>string[][]</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBAhjAvDA2gKAJAoEQAsCmANoSNgDQzYDuIAToQCbYC6azQA">Try it online 🡒</a>
+                    Yes, <pre>a</pre> is an <pre>Array&lt;Array&lt;string&gt;&gt;</pre>, which can also be written as <pre>string[][]</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBAhjAvDA2gKAJAoEQAsCmANoSNgDQzYDuIAToQCbYC6azQA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -925,7 +925,7 @@ const a = Promise.resolve(h);</pre>
 const a = f();</pre>
                 </summary>
                 <div class="details-content">
-                    Yes, <pre>a</pre> is a <pre>Promise&lt;string[][]&gt;</pre>, or alternatively a <pre>Promise&lt;Array&lt;Array&lt;string&gt;&gt;&gt;</pre>. It's a Promise which will resolve to a value of type <pre>string[][]</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/IYZwngdgxgBAZgV2gFwJYHsLwBQEoYDeAUAJABOApsgmVgNqkl0BEAFhQDYfrMA0MzAO7oyHACbMAuqWkBfIlEwhkMYDAC8OXAG4gA">Try it online 🡒</a>
+                    Yes, <pre>a</pre> is a <pre>Promise&lt;string[][]&gt;</pre>, or alternatively a <pre>Promise&lt;Array&lt;Array&lt;string&gt;&gt;&gt;</pre>. It's a Promise which will resolve to a value of type <pre>string[][]</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/IYZwngdgxgBAZgV2gFwJYHsLwBQEoYDeAUAJABOApsgmVgNqkl0BEAFhQDYfrMA0MzAO7oyHACbMAuqWkBfIlEwhkMYDAC8OXAG4gA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -940,7 +940,7 @@ const a = f();</pre>
 <pre class="code-block">type A = Record&lt;string, number&gt;</pre>
                 </summary>
                 <div class="details-content">
-                    Yes, <pre>A</pre> is a Record with <pre>string</pre> keys and <pre>number</pre> values. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAglC8UBKEDGB7ATgEwDwGdhMBLAOwHMAaKUgVwFsAjCTAPiA">Try it online 🡒</a>
+                    Yes, <pre>A</pre> is a Record with <pre>string</pre> keys and <pre>number</pre> values. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAglC8UBKEDGB7ATgEwDwGdhMBLAOwHMAaKUgVwFsAjCTAPiA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -953,7 +953,7 @@ const a = f();</pre>
 <pre class="code-block">type B = Record&lt;'hello', number | string&gt;</pre>
                 </summary>
                 <div class="details-content">
-                    The keys in type <pre>B</pre> are of type <pre>'hello'</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAQlC8UBKEDGB7ATgEwDwHIALCAGxPXwBooA7AVwFsAjCTKAHygGdhMBLGgHMAfEA">Try it online 🡒</a>
+                    The keys in type <pre>B</pre> are of type <pre>'hello'</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAQlC8UBKEDGB7ATgEwDwHIALCAGxPXwBooA7AVwFsAjCTKAHygGdhMBLGgHMAfEA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -966,7 +966,7 @@ const a = f();</pre>
 <pre class="code-block">type B = Record&lt;'hello', number | string&gt;</pre>
                 </summary>
                 <div class="details-content">
-                    The keys in type <pre>B</pre> are of type <pre>number | string</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAQlC8UBKEDGB7ATgEwDwHIALCAGxPXwBooA7AVwFsAjCTKAHygGdhMBLGgHMAfEA">Try it online 🡒</a>
+                    The keys in type <pre>B</pre> are of type <pre>number | string</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAQlC8UBKEDGB7ATgEwDwHIALCAGxPXwBooA7AVwFsAjCTKAHygGdhMBLGgHMAfEA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -982,7 +982,7 @@ const value: B = {
 }</pre>
                 </summary>
                 <div class="details-content">
-                    Yes, <pre>value</pre> has a key of <pre>'hello'</pre> and a value of <pre>123</pre>, which is a number, so it matches the type <pre>Record&lt;'hello', number | string&gt;</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAQlC8UBKEDGB7ATgEwDwHIALCAGxPXwBooA7AVwFsAjCTKAHygGdhMBLGgHMAfACgMNHlABuAQxJ0IALlgIoAb1FRtUYmXQqAjACYAzKIC+QA">Try it online 🡒</a>
+                    Yes, <pre>value</pre> has a key of <pre>'hello'</pre> and a value of <pre>123</pre>, which is a number, so it matches the type <pre>Record&lt;'hello', number | string&gt;</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAQlC8UBKEDGB7ATgEwDwHIALCAGxPXwBooA7AVwFsAjCTKAHygGdhMBLGgHMAfACgMNHlABuAQxJ0IALlgIoAb1FRtUYmXQqAjACYAzKIC+QA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -998,7 +998,7 @@ const value: C = {
 }</pre>
                 </summary>
                 <div class="details-content">
-                    No; <pre>value</pre> has a key of <pre>'world'</pre>, which matches <pre>string</pre>, but its value of <pre>456</pre> doesn't match the record's value type of <pre>234</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAwlC8UBKEDGB7ATgEwDwGdhMBLAOwHMAaKAJgGYAWAPgCgNTCoA3AQwBsArhABcsBFADeLKDKgB3LH2yiGAVgBsLAL5A">Try it online 🡒</a>
+                    No; <pre>value</pre> has a key of <pre>'world'</pre>, which matches <pre>string</pre>, but its value of <pre>456</pre> doesn't match the record's value type of <pre>234</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAwlC8UBKEDGB7ATgEwDwGdhMBLAOwHMAaKAJgGYAWAPgCgNTCoA3AQwBsArhABcsBFADeLKDKgB3LH2yiGAVgBsLAL5A">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -1013,7 +1013,7 @@ const value: C = {
 <pre class="code-block">type NumberAlias = number</pre>
                 </summary>
                 <div class="details-content">
-                    Yes, <pre>NumberAlias</pre> is now a type alias for <pre>number</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAcgrgWwEYQE4EEA2BLAhgZygF4oA7RFVIA">Try it online 🡒</a>
+                    Yes, <pre>NumberAlias</pre> is now a type alias for <pre>number</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAcgrgWwEYQE4EEA2BLAhgZygF4oA7RFVIA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -1026,7 +1026,7 @@ const value: C = {
 <pre class="code-block">type NewAlias = NumberAlias</pre>
                 </summary>
                 <div class="details-content">
-                    Yes, setting one alias for another will set the new alias to the original type. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAchDuBBANgSwIYGcoF5YFcBbAIwgCcUNMg">Try it online 🡒</a>
+                    Yes, setting one alias for another will set the new alias to the original type. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAchDuBBANgSwIYGcoF5YFcBbAIwgCcUNMg">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -1040,7 +1040,7 @@ const value: C = {
 const a: NumberAlias = 123;</pre>
                 </summary>
                 <div class="details-content">
-                    Yes, <pre>NumberAlias</pre> is an alias for <pre>number</pre>, so this is the same as writing <pre>const a: number = 123</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAcgrgWwEYQE4EEA2BLAhgZygF4oA7RFVAKAGMB7U-YKXALlgrSz0JIEYATAGYA3EA">Try it online 🡒</a>
+                    Yes, <pre>NumberAlias</pre> is an alias for <pre>number</pre>, so this is the same as writing <pre>const a: number = 123</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAcgrgWwEYQE4EEA2BLAhgZygF4oA7RFVAKAGMB7U-YKXALlgrSz0JIEYATAGYA3EA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -1055,7 +1055,7 @@ type NewAlias = NumberAlias
 const a: NewAlias = 123;</pre>
                 </summary>
                 <div class="details-content">
-                    Yes, <pre>NewAlias</pre> is another alias for <pre>number</pre>, so this is the same as writing <pre>const a: number = 123</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAcgrgWwEYQE4EEA2BLAhgZygF4oA7RFVAKFElggHcs9CT5k1mCqBjAe1L5gUXAC56THAWJQAjACYAzAG4gA">Try it online 🡒</a>
+                    Yes, <pre>NewAlias</pre> is another alias for <pre>number</pre>, so this is the same as writing <pre>const a: number = 123</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAcgrgWwEYQE4EEA2BLAhgZygF4oA7RFVAKFElggHcs9CT5k1mCqBjAe1L5gUXAC56THAWJQAjACYAzAG4gA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -1070,7 +1070,7 @@ type NewAlias = NumberAlias
 const a: NewAlias = 'hello';</pre>
                 </summary>
                 <div class="details-content">
-                    No, <pre>NewAlias</pre> is another alias for <pre>number</pre>, so this is the same as writing <pre>const a: number = 'hello'</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAcgrgWwEYQE4EEA2BLAhgZygF4oA7RFVAKFElggHcs9CT5k1mCqBjAe1L5gUXAC56THAWJQA5AAsImTH1kBuIA">Try it online 🡒</a>
+                    No, <pre>NewAlias</pre> is another alias for <pre>number</pre>, so this is the same as writing <pre>const a: number = 'hello'</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAcgrgWwEYQE4EEA2BLAhgZygF4oA7RFVAKFElggHcs9CT5k1mCqBjAe1L5gUXAC56THAWJQA5AAsImTH1kBuIA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -1100,7 +1100,7 @@ type B = Array&lt;A&gt;
 type Mystery = Promise&lt;B&gt;</pre>
                 </summary>
                 <div class="details-content">
-                    <pre>Mystery</pre> is an alias for <pre>Promise&lt;Array&lt;number&gt;&gt;</pre>, or equivalently <pre>Promise&lt;number[]&gt;</pre>. Aliases don't create any new types, they're just new names for existing ones that can save some typing. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAglC8UB2BXAtgIwgJwFCkigCEFZtsBDEAHhgD59xoBZEAZ2BxFIAVsB7NAEs2EakTpA">Try it online 🡒</a>
+                    <pre>Mystery</pre> is an alias for <pre>Promise&lt;Array&lt;number&gt;&gt;</pre>, or equivalently <pre>Promise&lt;number[]&gt;</pre>. Aliases don't create any new types, they're just new names for existing ones that can save some typing. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAglC8UB2BXAtgIwgJwFCkigCEFZtsBDEAHhgD59xoBZEAZ2BxFIAVsB7NAEs2EakTpA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -1115,7 +1115,7 @@ type B = Array&lt;Promise&lt;A&gt;&gt;
 type Puzzle = B | A</pre>
                 </summary>
                 <div class="details-content">
-                    <pre>Puzzle</pre> is of type <pre>Array&lt;Promise&lt;'hello' | 'world'&gt;&gt; | 'hello' | 'world'</pre>. Aliases are replaced like-for-like with the types they refer to. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAglC8UDkALCAbdB7JUA+yA7lgE7oAmSAUKJFAEIKwkkCGIAPAAolYC2ASwDOEDjAB84muGhcArgC8F6aIkYEYQA">Try it online 🡒</a>
+                    <pre>Puzzle</pre> is of type <pre>Array&lt;Promise&lt;'hello' | 'world'&gt;&gt; | 'hello' | 'world'</pre>. Aliases are replaced like-for-like with the types they refer to. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAglC8UDkALCAbdB7JUA+yA7lgE7oAmSAUKJFAEIKwkkCGIAPAAolYC2ASwDOEDjAB84muGhcArgC8F6aIkYEYQA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -1156,7 +1156,7 @@ type B = Promise&lt;string&gt;
 const a: A | B = [ Promise.resolve('123') ];</pre>
                 </summary>
                 <div class="details-content">
-                    No, <pre>[ Promise.resolve('123') ]</pre> is of type <pre>Array&lt;Promise&lt;string&gt;&gt;</pre>, which isn't assignable to either <pre>Array&lt;number&gt;</pre> or <pre>Promise&lt;string&gt;</pre>, so therefore isn't assignable to <pre>Array&lt;number&gt; | Promise&lt;string&gt;</pre>, which is written here with aliases as <pre>A | B</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAglC8sBOSCGIA8A7ArgWwCMIkA+AKFEigCEEoAFJAezwEsBnCDd4JVrAObkAxkyw8oqAFywoAHxp0A2g2ZtOAOiQR2TADYA3CAAoA5AEYATAGZTASigBdANxA">Try it online 🡒</a>
+                    No, <pre>[ Promise.resolve('123') ]</pre> is of type <pre>Array&lt;Promise&lt;string&gt;&gt;</pre>, which isn't assignable to either <pre>Array&lt;number&gt;</pre> or <pre>Promise&lt;string&gt;</pre>, so therefore isn't assignable to <pre>Array&lt;number&gt; | Promise&lt;string&gt;</pre>, which is written here with aliases as <pre>A | B</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAglC8sBOSCGIA8A7ArgWwCMIkA+AKFEigCEEoAFJAezwEsBnCDd4JVrAObkAxkyw8oqAFywoAHxp0A2g2ZtOAOiQR2TADYA3CAAoA5AEYATAGZTASigBdANxA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -1172,7 +1172,7 @@ const a: A | B = [ Promise.resolve('123') ];</pre>
 type Mystery = MakeArray&lt;number&gt;</pre>
                 </summary>
                 <div class="details-content">
-                    <pre>Mystery</pre> is the type <pre>Array&lt;number&gt;</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAsghgawgQQE6riAPAFQHxQC8UaG2+AUKJLCAM7ASohGyIrqZYB2ArgLYAjJniA">Try it online 🡒</a>
+                    <pre>Mystery</pre> is the type <pre>Array&lt;number&gt;</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAsghgawgQQE6riAPAFQHxQC8UaG2+AUKJLCAM7ASohGyIrqZYB2ArgLYAjJniA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -1186,7 +1186,7 @@ type Mystery = MakeArray&lt;number&gt;</pre>
 type Puzzle = MakePromise&lt;number&gt;</pre>
                 </summary>
                 <div class="details-content">
-                    <pre>Puzzle</pre> is a <pre>Promise&lt;number&gt;</pre>. The type <pre>number</pre> is passed to the parameter <pre>TypeParameter</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAsghgawgBQE4HsC2BLAzhAHgBVwU5U5MJgJUA+KAXijSz0JMmXMutroBQoSCwCuAL3EAbaM3hJWOfAQB2ozACN+QA">Try it online 🡒</a>
+                    <pre>Puzzle</pre> is a <pre>Promise&lt;number&gt;</pre>. The type <pre>number</pre> is passed to the parameter <pre>TypeParameter</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAsghgawgBQE4HsC2BLAzhAHgBVwU5U5MJgJUA+KAXijSz0JMmXMutroBQoSCwCuAL3EAbaM3hJWOfAQB2ozACN+QA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -1241,7 +1241,7 @@ type Puzzle = MakePromise&lt;number&gt;</pre>
 type A = SomeType&lt;number, string&gt;</pre>
                 </summary>
                 <div class="details-content">
-                    Type <pre>A</pre> is <pre>Array&lt;number | string&gt;</pre>. <pre>number</pre> is passed in as <pre>ParamOne</pre>, and <pre>string</pre> is passed as <pre>ParamTwo</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAyg9gWwgFXBAPABQIYCdsIDyAdhADRQ74LIDucAfFALxQCCu+IWeBJ0AH0q8a9BgG4AUKEjsWsRCjTpiAVwQAjCLgoBnYLgCWxAOYMgA">Try it online 🡒</a>
+                    Type <pre>A</pre> is <pre>Array&lt;number | string&gt;</pre>. <pre>number</pre> is passed in as <pre>ParamOne</pre>, and <pre>string</pre> is passed as <pre>ParamTwo</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAyg9gWwgFXBAPABQIYCdsIDyAdhADRQ74LIDucAfFALxQCCu+IWeBJ0AH0q8a9BgG4AUKEjsWsRCjTpiAVwQAjCLgoBnYLgCWxAOYMgA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -1269,7 +1269,7 @@ type A = SomeType&lt;number, string&gt;
 const a: A = [1, 2, "hello"]</pre>
                 </summary>
                 <div class="details-content">
-                    Yes, <pre>a</pre> is an <pre>Array&lt;string | number&gt;</pre>, so it matches the type referenced by the alias <pre>A</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAyg9gWwgFXBAPABQIYCdsIDyAdhADRQ74LIDucAfFALxQCCu+IWeBJ0AH0q8a9BgG4AUKEjsWsRCjTpiAVwQAjCLgoBnYLgCWxAOYNJAYzjF9UbAC45rANoBGCgCYKAIgAWEABsAuG8AXSA">Try it online 🡒</a>
+                    Yes, <pre>a</pre> is an <pre>Array&lt;string | number&gt;</pre>, so it matches the type referenced by the alias <pre>A</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAyg9gWwgFXBAPABQIYCdsIDyAdhADRQ74LIDucAfFALxQCCu+IWeBJ0AH0q8a9BgG4AUKEjsWsRCjTpiAVwQAjCLgoBnYLgCWxAOYNJAYzjF9UbAC45rANoBGCgCYKAIgAWEABsAuG8AXSA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -1284,7 +1284,7 @@ type A = SomeType&lt;number, string&gt;
 const a: A = [1, 2, 3]</pre>
                 </summary>
                 <div class="details-content">
-                    Yes, <pre>a</pre> is a <pre>number[]</pre>, so it matches the type referenced by the alias <pre>A</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAyg9gWwgFXBAPABQIYCdsIDyAdhADRQ74LIDucAfFALxQCCu+IWeBJ0AH0q8a9BgG4AUKEjsWsRCjTpiAVwQAjCLgoBnYLgCWxAOYNJAYzjF9UbAC45rANoBGCgCYKAZgC6QA">Try it online 🡒</a>
+                    Yes, <pre>a</pre> is a <pre>number[]</pre>, so it matches the type referenced by the alias <pre>A</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAyg9gWwgFXBAPABQIYCdsIDyAdhADRQ74LIDucAfFALxQCCu+IWeBJ0AH0q8a9BgG4AUKEjsWsRCjTpiAVwQAjCLgoBnYLgCWxAOYNJAYzjF9UbAC45rANoBGCgCYKAZgC6QA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -1301,7 +1301,7 @@ const a: A = [1, 2, 3]</pre>
     | { success: false, error: string }</pre>
                 </summary>
                 <div class="details-content">
-                    Result can be either an object whose <pre>success</pre> key is <pre>true</pre>, in which case there will also be a <pre>data</pre> property; or it can have <pre>success: false</pre> and instead have an <pre>error</pre> property. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAShDOBXANsKBeKAoKuoG8okBjYheALimACdEIAaKAEwENhWr5aBLAOwDmUAL448AHwJFEpclQBmrZPEZQINGgHsaXXoJFA">Try it online 🡒</a>
+                    Result can be either an object whose <pre>success</pre> key is <pre>true</pre>, in which case there will also be a <pre>data</pre> property; or it can have <pre>success: false</pre> and instead have an <pre>error</pre> property. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBAShDOBXANsKBeKAoKuoG8okBjYheALimACdEIAaKAEwENhWr5aBLAOwDmUAL448AHwJFEpclQBmrZPEZQINGgHsaXXoJFA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -1397,7 +1397,7 @@ const a: A = [1, 2, 3]</pre>
 type MyResult = GenResult&lt;string, number&gt;</pre>
                 </summary>
                 <div class="details-content">
-                    <pre>MyResult</pre> can either be of type <pre>{ success: true, data: string }</pre>, or <pre>{ success: false, error: number }</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBA4hB2AlCBnArgG2AHgPLwGU0BjY1FAGinwFEAnOgezoD4oBeKAKCl6gG8o6UuQBcUYHTQQqAEwCGweePxERKFFAC+PPgB8BQkmQ3iAZvIwoZUCA2Yr49JnW1dQkKAFkQydFg5YBD9MHBRJAEt4AHMqeDQAWwAjOxYgA">Try it online 🡒</a>
+                    <pre>MyResult</pre> can either be of type <pre>{ success: true, data: string }</pre>, or <pre>{ success: false, error: number }</pre>. <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBA4hB2AlCBnArgG2AHgPLwGU0BjY1FAGinwFEAnOgezoD4oBeKAKCl6gG8o6UuQBcUYHTQQqAEwCGweePxERKFFAC+PPgB8BQkmQ3iAZvIwoZUCA2Yr49JnW1dQkKAFkQydFg5YBD9MHBRJAEt4AHMqeDQAWwAjOxYgA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
@@ -1441,7 +1441,7 @@ type MyResult = GenResult&lt;string, number&gt;</pre>
 type ComplexResult = GenResult&lt;Promise&lt;boolean&gt;, Array&lt;string&gt;&gt;</pre>
                 </summary>
                 <div class="details-content">
-                    ComplexResult can either be of type <pre>{ success: true, data: Promise&lt;boolean&gt; }</pre>, or <pre>{ success: false, data: Array&lt;string&gt; }</pre> <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBA4hB2AlCBnArgG2AHgPLwGU0BjY1FAGinwFEAnOgezoD4oBeKAKCl6gG8o6UuQBcUYHTQQqAEwCGweePxERKFFAC+PPgB8BQkmQ3iAZvIwoZUCA2Yr49JnW1dQkKAGFGAWzAYEAAeyOhYHLAIoZg4AApMvgCW1tgARoyMgfLwLFQAggzyINgokonwAOYsLEA">Try it online 🡒</a>
+                    ComplexResult can either be of type <pre>{ success: true, data: Promise&lt;boolean&gt; }</pre>, or <pre>{ success: false, data: Array&lt;string&gt; }</pre> <a target="_blank" class="ts-playground" href="https://www.typescriptlang.org/play/?#code/C4TwDgpgBA4hB2AlCBnArgG2AHgPLwGU0BjY1FAGinwFEAnOgezoD4oBeKAKCl6gG8o6UuQBcUYHTQQqAEwCGweePxERKFFAC+PPgB8BQkmQ3iAZvIwoZUCA2Yr49JnW1dQkKAGFGAWzAYEAAeyOhYHLAIoZg4AApMvgCW1tgARoyMgfLwLFQAggzyINgokonwAOYsLEA">Try&nbsp;it&nbsp;online&nbsp;🡒</a>
                 </div>
             </details>
         </li>
